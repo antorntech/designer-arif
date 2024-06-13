@@ -4,6 +4,7 @@ import HomeTaskSection from "../components/home/HomeTaskSection";
 import HomeQualityService from "../components/home/HomeQualityService";
 import HomeRecentWork from "../components/home/HomeRecentWork";
 import HomeExperience from "../components/home/HomeExperience";
+import HomeSkills from "../components/home/HomeSkills";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeQualityService />
       <HomeRecentWork />
       <HomeExperience />
+      <HomeSkills />
     </>
   );
 };
