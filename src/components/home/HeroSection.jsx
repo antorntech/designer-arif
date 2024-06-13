@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <>
-      <section class="h-screen">
+      <section class="h-screen md:h-[85vh]">
         <div class="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div class="-mt-[45px] md:mt-0 mr-auto place-self-center lg:col-span-7">
             <h1 class="text-gradient text-2xl md:text-4xl lg:text-7xl font-bold tracking-tight py-5">
