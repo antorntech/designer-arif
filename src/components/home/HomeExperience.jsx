@@ -79,7 +79,9 @@ const HomeExperience = () => {
                     <p className="text-white font-semibold">
                       {experience.date}
                     </p>
-                    <p className="text-gradient text-3xl">{experience.title}</p>
+                    <p className="text-gradient text-xl md:text-3xl">
+                      {experience.title}
+                    </p>
                     <p className="text-white">{experience.location}</p>
                   </div>
                 );
@@ -105,7 +107,9 @@ const HomeExperience = () => {
                     key={education.id}
                   >
                     <p className="text-white font-semibold">{education.date}</p>
-                    <p className="text-gradient text-3xl">{education.title}</p>
+                    <p className="text-gradient text-xl md:text-3xl">
+                      {education.title}
+                    </p>
                     <p className="text-white">{education.location}</p>
                   </div>
                 );
