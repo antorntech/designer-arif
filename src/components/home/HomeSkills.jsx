@@ -63,7 +63,7 @@ const HomeSkills = () => {
                   <img
                     src={skill.img}
                     alt=""
-                    className="w-20 h-20 grayscale group-hover:grayscale-0 group-hover:scale-[1.1] transition-all duration-300"
+                    className="w-20 h-20 group-hover:grayscale group-hover:scale-[1.1] transition-all duration-300"
                   />
                   <CountUp
                     end={skill.percentage}
