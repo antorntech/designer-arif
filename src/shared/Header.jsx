@@ -68,7 +68,7 @@ const Header = () => {
             : ""
         }`}
       >
-        <div className="w-full flex justify-between items-center gap-3">
+        <div className="w-full max-w-screen-xl mx-auto flex justify-between items-center gap-3">
           <div>
             <Link to="/">
               <img src="s.png" alt="logo" width={300} />
