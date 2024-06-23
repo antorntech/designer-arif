@@ -3,6 +3,7 @@ import Header from "../shared/Header";
 import AppRoutes from "../routes/AppRoutes";
 import Loader from "../loaders/Loader";
 import Footer from "../shared/Footer";
+import GoToTop from "../components/GoToTop/GoToTop";
 
 const AppLayout = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -18,6 +19,7 @@ const AppLayout = () => {
         <Loader />
       ) : (
         <>
+          <GoToTop />
           <Header />
           <main>
             <AppRoutes />

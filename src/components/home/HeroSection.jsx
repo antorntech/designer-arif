@@ -48,7 +48,7 @@ const HeroSection = () => {
           </div>
           <div class="lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="hero-banner.png"
+              src="hero-banner02.png"
               alt="mockup"
               className="w-full object-contain"
             />

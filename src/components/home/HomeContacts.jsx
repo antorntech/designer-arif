@@ -3,7 +3,11 @@ import React from "react";
 const HomeContacts = () => {
   return (
     <>
-      <section className="py-6 md:py-[50px] lg:py-[100px]">
+      <section
+        className="py-6 md:py-[50px] lg:py-[100px]"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="p-5 bg-[#123641] md:bg-[#002d3b80] rounded-md">

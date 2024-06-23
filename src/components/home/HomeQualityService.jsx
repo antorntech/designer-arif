@@ -47,7 +47,11 @@ const HomeQualityService = () => {
   ];
   return (
     <>
-      <section className="py-6 md:py-[50px] lg:py-[100px]">
+      <section
+        className="py-6 md:py-[50px] lg:py-[100px]"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold">
