@@ -82,7 +82,7 @@ const HomeRecentWork = () => {
     <>
       <section className="py-6 md:py-[50px] lg:py-[100px]">
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold">
               My Recent Works
             </h1>
@@ -97,7 +97,7 @@ const HomeRecentWork = () => {
                 <li
                   className={
                     activeTab === "all"
-                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3 animate__animated animate__fadeIn"
+                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3"
                       : "flex justify-center items-center tablinks hover:bg-[#40F4D8] text-white rounded-md lg:rounded-full py-2 px-3 cursor-pointer transition duration-700 ease-in-out"
                   }
                   onClick={() => openTab("all")}
@@ -107,7 +107,7 @@ const HomeRecentWork = () => {
                 <li
                   className={
                     activeTab === "trending"
-                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3 animate__animated animate__fadeIn"
+                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3"
                       : "flex justify-center items-center tablinks hover:bg-[#40F4D8] text-white rounded-md lg:rounded-full py-2 px-3 cursor-pointer transition duration-700 ease-in-out"
                   }
                   onClick={() => openTab("trending")}
@@ -117,7 +117,7 @@ const HomeRecentWork = () => {
                 <li
                   className={
                     activeTab === "featured"
-                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3 animate__animated animate__fadeIn"
+                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3"
                       : "flex justify-center items-center tablinks hover:bg-[#40F4D8] text-white rounded-md lg:rounded-full py-2 px-3 cursor-pointer transition duration-700 ease-in-out"
                   }
                   onClick={() => openTab("featured")}
@@ -127,7 +127,7 @@ const HomeRecentWork = () => {
                 <li
                   className={
                     activeTab === "logodesign"
-                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3 animate__animated animate__fadeIn"
+                      ? "flex justify-center items-center tablinks active bg-[#40F4D8] rounded-md lg:rounded-full text-white py-2 px-3"
                       : "flex justify-center items-center tablinks hover:bg-[#40F4D8] text-white rounded-md lg:rounded-full py-2 px-3 cursor-pointer transition duration-700 ease-in-out"
                   }
                   onClick={() => openTab("logodesign")}
