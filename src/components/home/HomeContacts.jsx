@@ -23,24 +23,24 @@ const HomeContacts = () => {
               <div>
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
                     type="text"
                     placeholder="First Name"
                   />
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
                     type="text"
                     placeholder="Last Name"
                   />
                 </div>
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
                     type="text"
                     placeholder="Email Address"
                   />
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
                     type="text"
                     placeholder="Phone Number"
                   />
@@ -67,7 +67,7 @@ const HomeContacts = () => {
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <textarea
                     rows="5"
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
                     type="text"
                     placeholder="Message"
                   />
