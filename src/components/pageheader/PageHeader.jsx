@@ -8,13 +8,10 @@ const PageHeader = ({ title }) => {
         {title}
       </h1>
       <div className="text-white flex items-center gap-3">
-        <Link
-          to="/"
-          className="hover:text-[#60efff] transition-all duration-300"
-        >
+        <Link to="/" className="text-[#60efff]">
           Home
         </Link>{" "}
-        / <p>{title}</p>
+        / <p className="text-gray-500">{title}</p>
       </div>
     </div>
   );
