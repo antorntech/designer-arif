@@ -4,11 +4,7 @@ import CountUp from "react-countup";
 const HomeTaskSection = () => {
   return (
     <>
-      <div
-        className="w-full h-full grid max-w-screen-xl py-4 mx-auto"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-      >
+      <div className="w-full h-full grid max-w-screen-xl py-4 mx-auto">
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-12">
           <div className="flex items-center gap-2 text-white font-bold mx-auto">
             <CountUp
