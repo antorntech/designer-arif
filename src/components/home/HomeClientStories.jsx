@@ -13,7 +13,7 @@ const HomeClientStories = () => {
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -54,7 +54,7 @@ const HomeClientStories = () => {
           </div>
         </>
       ),
-      avatar: "client01.jpg",
+      avatar: "client01.png",
       clientLogo: "clientlogo01.png",
       designation: "SEO Specialist, Theme Junction",
       description:
@@ -71,7 +71,7 @@ const HomeClientStories = () => {
           </div>
         </>
       ),
-      avatar: "client02.jpg",
+      avatar: "client02.png",
       clientLogo: "clientlogo02.png",
       designation: "SEO Specialist, Theme Junction",
       description:
@@ -88,7 +88,7 @@ const HomeClientStories = () => {
           </div>
         </>
       ),
-      avatar: "client01.jpg",
+      avatar: "client01.png",
       clientLogo: "clientlogo01.png",
       designation: "SEO Specialist, Theme Junction",
       description:
@@ -105,7 +105,7 @@ const HomeClientStories = () => {
           </div>
         </>
       ),
-      avatar: "client02.jpg",
+      avatar: "client02.png",
       clientLogo: "clientlogo02.png",
       designation: "SEO Specialist, Theme Junction",
       description:
@@ -120,41 +120,47 @@ const HomeClientStories = () => {
         data-aos-duration="2000"
       >
         <div className="w-full h-full max-w-screen-xl mx-auto px-4 py-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h1 className="text-gradient text-2xl md:text-6xl font-bold">
-                My Client's Stories
-              </h1>
-              <p className="text-white w-full mt-3">
-                Empowering people in new a digital journey with my super
-                services
-              </p>
-            </div>
+          <div className="text-center mb-8 md:mb-16">
+            <h1 className="text-gradient text-2xl md:text-6xl font-bold">
+              My Client's Feedback
+            </h1>
+            <p className="text-white w-full md:w-1/2 mx-auto mt-3">
+              I break down complex user experinece problems to create integritiy
+              focussed solutions that connect billions of people
+            </p>
+          </div>
+          <div className="w-full">
             <div className="slider-container">
               <Slider {...settings}>
                 {clientsSays.map((client, index) => (
                   <div key={index} className="w-full">
-                    <div className="bg-[#000304] md:mx-3 p-5 rounded-md">
-                      <div className="flex justify-between items-start">
-                        <img src={client.clientLogo} alt="" />
-                        <img
-                          src={client.avatar}
-                          className="rounded-md w-32 h-32"
-                          alt=""
-                          style={{ clipPath: "circle(97% at 100% 0)" }}
-                        />
-                      </div>
-                      <div className="py-3">{client.icon}</div>
-                      <p className="text-white pb-5 text-sm">
-                        {client.description}
-                      </p>
-                      <div className="pt-3">
-                        <p className="text-white font-semibold text-xl">
-                          {client.name}
-                        </p>
-                        <p className="text-white text-sm">
-                          {client.designation}
-                        </p>
+                    <div className="bg-[#38c4956e] md:mx-3 p-5 rounded-md client-card">
+                      <div className="flex flex-col items-center justify-between">
+                        <div className="pb-28 flex flex-col justify-center items-center">
+                          <img
+                            src={client.avatar}
+                            alt="client"
+                            className="w-32 h-32 object-cover rounded-full"
+                          />
+                          <div className="mt-2 text-center">
+                            <h1 className="text-white text-lg font-bold">
+                              {client.name}
+                            </h1>
+                            <p className="text-white text-sm">
+                              {client.designation}
+                            </p>
+                          </div>
+                          <div className="mt-4 flex justify-center items-center gap-1">
+                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                          </div>
+                          <div className="text-center mt-2">
+                            <p className="text-white">{client.description}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

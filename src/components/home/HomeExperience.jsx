@@ -69,10 +69,6 @@ const HomeExperience = () => {
                 My Experience
               </h1>
             </div>
-            <p className="text-white w-full md:w-2/3 mt-3">
-              I break down complex user experinece problems to create integritiy
-              focussed solutions that connect billions of people
-            </p>
             <div className="w-full mt-8 flex flex-col items-center gap-5">
               {experiences.map((experience) => {
                 return (
@@ -96,13 +92,9 @@ const HomeExperience = () => {
             <div className="flex items-center gap-2">
               <i class="fa-solid fa-graduation-cap text-gradient text-5xl"></i>
               <h1 className="text-gradient text-2xl md:text-6xl font-bold">
-                My Education
+                My Certification
               </h1>
             </div>
-            <p className="text-white w-full md:w-2/3 mt-3">
-              I break down complex user experinece problems to create integritiy
-              focussed solutions that connect billions of people
-            </p>
             <div className="w-full mt-8 flex flex-col items-center gap-5">
               {educations.map((education) => {
                 return (
