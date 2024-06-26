@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeContacts = () => {
   return (
@@ -110,6 +111,47 @@ const HomeContacts = () => {
                     Dhanmondi 32, Shukrabad <br />
                     Dhaka, Bangladesh
                   </h2>
+                </div>
+              </div>
+              <div className="w-full mx-auto">
+                <div className="text-center my-8">
+                  <h1 className="text-gradient text-2xl md:text-6xl font-bold">
+                    Let's Connect
+                  </h1>
+                </div>
+                <div className="flex flex-col md:flex-row items-center gap-5">
+                  <Link to="https://github.com/artistarif" target="_blank">
+                    <div className="w-[300px] md:w-[200px] blurry px-4 py-2 flex items-center justify-center gap-2 text-white">
+                      <i class="fa-brands fa-behance text-2xl text-[#00b7ff]"></i>
+                      <span className="text-2xl">Behance</span>
+                    </div>
+                  </Link>
+                  <Link
+                    to="https://www.linkedin.com/in/artistarif/"
+                    target="_blank"
+                  >
+                    <div className="w-[300px] md:w-[200px] blurry px-4 py-2 flex items-center justify-center gap-2 text-white">
+                      <i class="fa-solid fa-basketball text-2xl text-[#ff00dd]"></i>
+                      <span className="text-2xl">Dribble</span>
+                    </div>
+                  </Link>
+                </div>
+                <div className="flex flex-col md:flex-row items-center gap-5 mt-4">
+                  <Link to="https://twitter.com/artistarif" target="_blank">
+                    <div className="w-[300px] md:w-[200px] blurry px-4 py-2 flex items-center justify-center gap-2 text-white">
+                      <i class="fa-brands fa-linkedin text-2xl text-[#4ac9fc]"></i>
+                      <span className="text-2xl">Linkedin</span>
+                    </div>
+                  </Link>
+                  <Link
+                    to="https://www.instagram.com/artistarif/"
+                    target="_blank"
+                  >
+                    <div className="w-[300px] md:w-[200px] blurry px-4 py-2 flex items-center justify-center gap-2 text-white">
+                      <i class="fa-brands fa-instagram text-2xl text-[#722127]"></i>
+                      <span className="text-2xl">Instagram</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
