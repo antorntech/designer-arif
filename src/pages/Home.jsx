@@ -6,8 +6,8 @@ import HomeRecentWork from "../components/home/HomeRecentWork";
 import HomeExperience from "../components/home/HomeExperience";
 import HomeSkills from "../components/home/HomeSkills";
 import HomeClientStories from "../components/home/HomeClientStories";
-import HomeRecentBlogs from "../components/home/HomeRecentBlogs";
 import HomeContacts from "../components/home/HomeContacts";
+import HomeRecentBlogs02 from "../components/home/HomeRecentBlogs02";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <HomeExperience />
       <HomeSkills />
       <HomeClientStories />
-      <HomeRecentBlogs />
+      <HomeRecentBlogs02 />
       <HomeContacts />
     </>
   );

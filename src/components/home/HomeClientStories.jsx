@@ -134,7 +134,7 @@ const HomeClientStories = () => {
               <Slider {...settings}>
                 {clientsSays.map((client, index) => (
                   <div key={index} className="w-full">
-                    <div className="bg-[#38c4956e] md:mx-3 p-5 rounded-md client-card">
+                    <div className="bg-[#002D3B] md:mx-3 p-5 rounded-md client-card">
                       <div className="flex flex-col items-center justify-between">
                         <div className="pb-28 flex flex-col justify-center items-center">
                           <img
