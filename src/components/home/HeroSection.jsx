@@ -26,13 +26,15 @@ const HeroSection = () => {
               </Link>
               <div className="flex items-center gap-4">
                 <Link
-                  to="/"
+                  to="https://www.facebook.com/helloarif0?mibextid=ZbWKwL"
+                  target="_blank"
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
                   <i class="fa fa-solid fa-facebook text-white text-lg"></i>
                 </Link>
                 <Link
-                  to="/"
+                  to="https://www.linkedin.com/in/helloarif"
+                  target="_blank"
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
                   <i class="fa fa-solid fa-linkedin text-white text-lg"></i>
@@ -41,7 +43,7 @@ const HeroSection = () => {
                   to="/"
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
-                  <i class="fa fa-solid fa-globe text-white text-lg"></i>
+                  <i class="fa-brands fa-whatsapp text-white text-lg"></i>
                 </Link>
               </div>
             </div>

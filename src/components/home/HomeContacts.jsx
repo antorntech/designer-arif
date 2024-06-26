@@ -120,16 +120,13 @@ const HomeContacts = () => {
                   </h1>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5">
-                  <Link to="https://github.com/artistarif" target="_blank">
+                  <Link to="https://www.behance.net/helloarif" target="_blank">
                     <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i class="fa-brands fa-behance text-2xl text-[#00b7ff]"></i>
                       <span className="text-2xl">Behance</span>
                     </div>
                   </Link>
-                  <Link
-                    to="https://www.linkedin.com/in/artistarif/"
-                    target="_blank"
-                  >
+                  <Link to="https://dribbble.com/helloarif" target="_blank">
                     <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i class="fa-solid fa-basketball text-2xl text-[#ff00dd]"></i>
                       <span className="text-2xl">Dribble</span>
@@ -137,14 +134,17 @@ const HomeContacts = () => {
                   </Link>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5 mt-4">
-                  <Link to="https://twitter.com/artistarif" target="_blank">
+                  <Link
+                    to="https://www.linkedin.com/in/helloarif"
+                    target="_blank"
+                  >
                     <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i class="fa-brands fa-linkedin text-2xl text-[#4ac9fc]"></i>
                       <span className="text-2xl">Linkedin</span>
                     </div>
                   </Link>
                   <Link
-                    to="https://www.instagram.com/artistarif/"
+                    to="https://www.instagram.com/helloarif200"
                     target="_blank"
                   >
                     <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
