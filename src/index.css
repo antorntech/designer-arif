@@ -41,3 +41,10 @@ body {
     0% 75%
   );
 }
+
+.pageheader {
+  background-image: url("./assets/imgs/pageheader.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
