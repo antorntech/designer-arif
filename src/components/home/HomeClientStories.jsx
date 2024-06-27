@@ -134,14 +134,16 @@ const HomeClientStories = () => {
               <Slider {...settings}>
                 {clientsSays.map((client, index) => (
                   <div key={index} className="w-full">
-                    <div className="bg-[#002D3B] md:mx-3 p-5 rounded-md client-card">
+                    <div className="bg-[#002D3B] md:mx-3 p-5 rounded-xl client-card">
                       <div className="flex flex-col items-center justify-between">
                         <div className="pb-28 flex flex-col justify-center items-center">
-                          <img
-                            src={client.avatar}
-                            alt="client"
-                            className="w-32 h-32 object-cover rounded-full"
-                          />
+                          <div className="bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] rounded-full p-[2px]">
+                            <img
+                              src={client.avatar}
+                              alt="client"
+                              className="w-20 h-20 object-cover rounded-full"
+                            />
+                          </div>
                           <div className="mt-2 text-center">
                             <h1 className="text-white text-lg font-bold">
                               {client.name}
@@ -150,12 +152,12 @@ const HomeClientStories = () => {
                               {client.designation}
                             </p>
                           </div>
-                          <div className="mt-4 flex justify-center items-center gap-1">
-                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
-                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
-                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
-                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
-                            <i class="fa-solid fa-star w-6 h-6 text-white"></i>
+                          <div className="mt-4 flex justify-center items-center gap-2">
+                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
                           </div>
                           <div className="text-center mt-2">
                             <p className="text-white">{client.description}</p>

@@ -86,7 +86,7 @@ const HomeRecentWork = () => {
               <Slider {...settings}>
                 {recentWorks.map((work, index) => (
                   <div key={index} className="w-full">
-                    <div className="mx-3 rounded-[10%] border-2 border-white">
+                    <div className="mx-3 rounded-[10%] border-2 border-gray-600">
                       <img
                         src={work.thumbnail}
                         alt=""

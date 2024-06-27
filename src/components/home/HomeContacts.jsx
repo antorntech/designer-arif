@@ -11,7 +11,7 @@ const HomeContacts = () => {
       >
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="p-5 bg-[#123641] md:bg-[#002d3b80] rounded-md">
+            <div className="border-2 border-gray-600 p-5 bg-[#123641] md:bg-[#002d3b80] rounded-md">
               <div>
                 <h1 className="text-gradient text-2xl md:text-5xl font-bold pb-2">
                   Let’s work together!
@@ -24,24 +24,24 @@ const HomeContacts = () => {
               <div>
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
                     type="text"
                     placeholder="First Name"
                   />
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
                     type="text"
                     placeholder="Last Name"
                   />
                 </div>
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
                     type="text"
                     placeholder="Email Address"
                   />
                   <input
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
                     type="text"
                     placeholder="Phone Number"
                   />
@@ -55,20 +55,29 @@ const HomeContacts = () => {
                       Please choose an option
                     </option>
                     <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
-                      Branding Design
-                    </option>
-                    <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
                       Logo Design
                     </option>
                     <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
-                      UI/UX Desing
+                      Branding
+                    </option>
+                    <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
+                      Print Design
+                    </option>
+                    <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
+                      Social Media
+                    </option>
+                    <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
+                      Animation
+                    </option>
+                    <option className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none">
+                      3D Modeling
                     </option>
                   </select>
                 </div>
                 <div className="w-full mt-5 flex flex-col md:flex-row items-center gap-5">
                   <textarea
                     rows="5"
-                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#00b7ff] focus:ring-1 focus:ring-[#00b7ff]"
+                    className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
                     type="text"
                     placeholder="Message"
                   />
@@ -113,8 +122,8 @@ const HomeContacts = () => {
                   </h2>
                 </div>
               </div>
-              <div className="w-full mx-auto">
-                <div className="text-center my-8">
+              <div className="w-full mx-auto rounded-xl border-2 border-gray-600 p-5">
+                <div className="text-center mb-8">
                   <h1 className="text-gradient text-2xl md:text-6xl font-bold">
                     Let's Connect
                   </h1>
@@ -122,7 +131,7 @@ const HomeContacts = () => {
                 <div className="flex flex-col md:flex-row items-center gap-5">
                   <Link to="https://www.behance.net/helloarif" target="_blank">
                     <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
-                      <i class="fa-brands fa-behance text-2xl text-[#00b7ff]"></i>
+                      <i class="fa-brands fa-behance text-2xl text-[#4AF3E3]"></i>
                       <span className="text-2xl">Behance</span>
                     </div>
                   </Link>

@@ -54,7 +54,7 @@ const HomeRecentBlogs02 = () => {
                     className="w-full group-hover:scale-125 transition-all duration-300"
                     alt=""
                   />
-                  <div className="w-full h-full p-5 absolute top-0 left-0 bg-gradient-to-t from-[#002D3B] via-[rgba(121,121,121,0.16)] to-transparent">
+                  <div className="w-full h-full p-5 absolute bottom-[-5px] left-0 bg-gradient-to-t from-[#002D3B] via-[#002d3bb0] to-transparent">
                     <div className="flex flex-col items-start justify-end gap-5 h-full">
                       <div className="w-full px-4 py-2">
                         <h2 className="text-white text-2xl font-semibold">

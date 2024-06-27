@@ -19,7 +19,7 @@ const HeroSection = () => {
             <div className="mt-6 md:mt-12 flex flex-col lg:flex-row items-center gap-4 md:gap-6">
               <Link
                 to="/contact"
-                className="border-[2px] border-[#60efff] px-8 py-4 hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white w-full flex justify-center items-center md:w-[250px] gap-2"
+                className="border-[2px] border-[#60efff] px-8 py-4 hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] font-semibold rounded-full text-white w-full flex justify-center items-center md:w-[250px] gap-2 transition-all duration-300"
               >
                 <span>Contact With Me</span>
                 <i class="fa-solid fa-arrow-right"></i>
@@ -28,20 +28,20 @@ const HeroSection = () => {
                 <Link
                   to="https://www.facebook.com/helloarif0?mibextid=ZbWKwL"
                   target="_blank"
-                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
+                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
                   <i class="fa fa-solid fa-facebook text-white text-lg"></i>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/in/helloarif"
                   target="_blank"
-                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
+                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
                   <i class="fa fa-solid fa-linkedin text-white text-lg"></i>
                 </Link>
                 <Link
                   to="/"
-                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:bg-[#60efff] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
+                  className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
                   <i class="fa-brands fa-whatsapp text-white text-lg"></i>
                 </Link>
