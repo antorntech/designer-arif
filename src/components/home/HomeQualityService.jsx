@@ -369,11 +369,7 @@ const HomeQualityService = () => {
 
   return (
     <>
-      <section
-        className="py-6 md:py-[50px] lg:py-[100px]"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-      >
+      <section className="py-6 md:py-[50px] lg:py-[100px]">
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold">
@@ -384,7 +380,11 @@ const HomeQualityService = () => {
               focussed solutions that connect billions of people
             </p>
           </div>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div
+            className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8"
+            data-aos="fade-in"
+            data-aos-duration="3000"
+          >
             {myQualityServices.map((data, index) => {
               return (
                 <Link to="/services">
