@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 const HomeTaskSection = () => {
   return (
     <>
-      <div className="rounded-md bg-gradient-to-r from-[#5bf0f869] via-[#38f6cd88] to-[#04fe8e91] p-1 bg-[#22fab211] w-full h-full grid max-w-screen-xl py-8 mx-auto">
+      <div className="rounded-md bg-gradient-to-r from-[#5bf0f846] via-[#38f6cd5b] to-[#04fe8e5b] p-1 bg-[#22fab211] w-full h-full grid max-w-screen-xl py-8 mx-auto">
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-12">
           <div className="flex items-center gap-2 text-white font-bold mx-auto">
             <CountUp
@@ -47,7 +47,7 @@ const HomeTaskSection = () => {
               className="text-xl md:text-5xl"
             />
             <p className="text-md md:text-2xl font-bold">
-              Years of <br /> Experience
+              Work for <br /> Company
             </p>
           </div>
         </div>
