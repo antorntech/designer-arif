@@ -53,16 +53,21 @@ const Projects = () => {
                 key={project.id}
                 className="w-full h-full"
               >
-                <div
-                  key={project.id}
-                  className="w-full h-full flex flex-col items-center justify-center gap-2"
-                >
+                <div className="w-full group overflow-hidden relative rounded-md">
                   <img
                     src={project.thumbnail}
-                    alt={project.name}
-                    className="w-full h-full object-cover rounded-md"
+                    className="w-full group-hover:scale-125 transition-all duration-300"
+                    alt=""
                   />
-                  <p className="text-center text-white">{project.name}</p>
+                  <div className="w-full h-full p-5 absolute bottom-[-5px] left-0 bg-gradient-to-t from-[#002D3B] via-[#002d3b56] to-transparent">
+                    <div className="flex flex-col items-start justify-end gap-5 h-full">
+                      <div className="w-full px-4 py-2">
+                        <h2 className="text-white text-2xl font-semibold">
+                          {project.name}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Link>
             ))}
