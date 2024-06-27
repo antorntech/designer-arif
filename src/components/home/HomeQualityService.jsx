@@ -328,6 +328,7 @@ const HomeQualityService = () => {
       category: "trending",
       thumbnail: "logodesign.png",
       title: "Logo Design",
+      link: "/all-logo-design",
       description: "Project was about precision and information.",
     },
     {
@@ -335,6 +336,7 @@ const HomeQualityService = () => {
       category: "trending",
       thumbnail: "branding.png",
       title: "Branding",
+      link: "/all-branding",
       description: "Project was about precision and information.",
     },
     {
@@ -342,6 +344,7 @@ const HomeQualityService = () => {
       category: "trending",
       thumbnail: "printdesign.png",
       title: "Print Design",
+      link: "/all-print-design",
       description: "Project was about precision and information.",
     },
     {
@@ -349,6 +352,7 @@ const HomeQualityService = () => {
       category: "featured",
       thumbnail: "socialmedia.png",
       title: "Social Media",
+      link: "/all-social-media",
       description: "Project was about precision and information.",
     },
     {
@@ -356,6 +360,7 @@ const HomeQualityService = () => {
       category: "logodesign",
       thumbnail: "animation.png",
       title: "Animation",
+      link: "/all-animation",
       description: "Project was about precision and information.",
     },
     {
@@ -363,6 +368,7 @@ const HomeQualityService = () => {
       category: "logodesign",
       thumbnail: "3dmodeling.png",
       title: "3D Modeling",
+      link: "/all-3d-modeling",
       description: "Project was about precision and information.",
     },
   ];
@@ -387,7 +393,7 @@ const HomeQualityService = () => {
           >
             {myQualityServices.map((data, index) => {
               return (
-                <Link to="/services">
+                <Link to={data.link} key={data.id}>
                   <div
                     key={index}
                     className="border-2 border-gray-600 rounded-[10%] overflow-hidden"

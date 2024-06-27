@@ -9,6 +9,7 @@ const Services = () => {
       category: "trending",
       thumbnail: "logodesign.png",
       title: "Logo Design",
+      link: "/all-logo-design",
       description: "Project was about precision and information.",
     },
     {
@@ -16,6 +17,7 @@ const Services = () => {
       category: "trending",
       thumbnail: "branding.png",
       title: "Branding",
+      link: "/all-branding",
       description: "Project was about precision and information.",
     },
     {
@@ -23,6 +25,7 @@ const Services = () => {
       category: "trending",
       thumbnail: "printdesign.png",
       title: "Print Design",
+      link: "/all-print-design",
       description: "Project was about precision and information.",
     },
     {
@@ -30,6 +33,7 @@ const Services = () => {
       category: "featured",
       thumbnail: "socialmedia.png",
       title: "Social Media",
+      link: "/all-social-media",
       description: "Project was about precision and information.",
     },
     {
@@ -37,6 +41,7 @@ const Services = () => {
       category: "logodesign",
       thumbnail: "animation.png",
       title: "Animation",
+      link: "/all-animation",
       description: "Project was about precision and information.",
     },
     {
@@ -44,6 +49,7 @@ const Services = () => {
       category: "logodesign",
       thumbnail: "3dmodeling.png",
       title: "3D Modeling",
+      link: "/all-3d-modeling",
       description: "Project was about precision and information.",
     },
   ];
@@ -56,12 +62,12 @@ const Services = () => {
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
             {myQualityServices.map((data, index) => {
               return (
-                <Link to="/services">
+                <Link to={`/services${data.link}`} key={data.id}>
                   <div
                     key={index}
                     className="border-2 border-gray-600 rounded-[10%] overflow-hidden"
                   >
-                    <h1 className="text-white text-2xl text-center font-semibold p-5">
+                    <h1 className="text-white text-3xl text-center font-semibold p-5">
                       {data.title}
                     </h1>
                     <img
