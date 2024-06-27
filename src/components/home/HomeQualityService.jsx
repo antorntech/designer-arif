@@ -8,7 +8,7 @@
 //     console.log(tabName);
 //   };
 
-//   const myFeaturedCourses = [
+//   const myQualityServices = [
 //     {
 //       id: 1,
 //       category: "trending",
@@ -67,13 +67,13 @@
 //     },
 //   ];
 
-//   const trendingCourses = myFeaturedCourses.filter(
+//   const trendingCourses = myQualityServices.filter(
 //     (course) => course.category === "trending"
 //   );
-//   const featuredCourses = myFeaturedCourses.filter(
+//   const featuredCourses = myQualityServices.filter(
 //     (course) => course.category === "featured"
 //   );
-//   const logodesignCourses = myFeaturedCourses.filter(
+//   const logodesignCourses = myQualityServices.filter(
 //     (course) => course.category === "logodesign"
 //   );
 
@@ -150,7 +150,7 @@
 //               }
 //             >
 //               <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5">
-//                 {myFeaturedCourses.map((data, index) => {
+//                 {myQualityServices.map((data, index) => {
 //                   return (
 //                     <>
 //                       <div
@@ -322,7 +322,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomeQualityService = () => {
-  const myFeaturedCourses = [
+  const myQualityServices = [
     {
       id: 1,
       category: "trending",
@@ -385,7 +385,7 @@ const HomeQualityService = () => {
             </p>
           </div>
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {myFeaturedCourses.map((data, index) => {
+            {myQualityServices.map((data, index) => {
               return (
                 <Link to="/services">
                   <div

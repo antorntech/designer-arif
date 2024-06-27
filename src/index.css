@@ -48,3 +48,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.skill-banner {
+  background-image: url("./assets/imgs/skill-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

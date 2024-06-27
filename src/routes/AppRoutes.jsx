@@ -5,10 +5,12 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
 import Services from "../pages/Services";
+import ScrlTopOfPage from "../components/scrlTopOfPage/ScrlTopOfPage";
 
 const AppRoutes = () => {
   return (
     <>
+      <ScrlTopOfPage />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

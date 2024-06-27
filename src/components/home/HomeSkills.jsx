@@ -56,7 +56,7 @@ const HomeSkills = () => {
             focussed solutions that connect billions of people
           </p>
         </div>
-        <div className="w-full rounded-md flex flex-col md:flex-row items-center justify-center gap-5 bg-[url('skill-banner.png')] bg-cover bg-no-repeat">
+        <div className="w-full rounded-md flex flex-col md:flex-row items-center justify-center gap-5 skill-banner">
           {skills.map((skill) => (
             <div
               className="w-full flex items-center gap-5 rounded-md"
