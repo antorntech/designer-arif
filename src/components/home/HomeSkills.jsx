@@ -54,10 +54,8 @@ const HomeSkills = () => {
         </div>
         <div
           className="w-full rounded-md flex flex-col md:flex-row items-center justify-center gap-5"
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="500"
-          data-aos-offset="0"
+          data-aos="fade-in"
+          data-aos-duration="3000"
         >
           {skills.map((skill) => (
             <div
