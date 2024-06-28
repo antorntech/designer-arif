@@ -49,7 +49,7 @@ const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Link
-                to={project.link}
+                to={`/projects/${project.id}`}
                 key={project.id}
                 className="w-full h-full"
               >
