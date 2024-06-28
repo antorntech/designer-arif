@@ -2,6 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const HomeRecentWork = () => {
   var settings = {
@@ -66,11 +67,7 @@ const HomeRecentWork = () => {
   ];
   return (
     <>
-      <section
-        className="py-6 md:py-[50px] lg:py-[100px]"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-      >
+      <section className="py-6 md:py-[50px] lg:py-[100px]">
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold">
@@ -81,19 +78,25 @@ const HomeRecentWork = () => {
               focussed solutions that connect billions of people
             </p>
           </div>
-          <div className="grid grid-cols-1">
+          <div
+            className="grid grid-cols-1"
+            data-aos="fade-in"
+            data-aos-duration="3000"
+          >
             <div className="slider-container">
               <Slider {...settings}>
                 {recentWorks.map((work, index) => (
-                  <div key={index} className="w-full">
-                    <div className="mx-3 rounded-[10%] border-2 border-gray-600">
-                      <img
-                        src={work.thumbnail}
-                        alt=""
-                        className="w-full object-contain rounded-[10%]"
-                      />
+                  <Link to="/projects">
+                    <div key={index} className="w-full">
+                      <div className="mx-3 rounded-[10%] border-2 border-gray-600">
+                        <img
+                          src={work.thumbnail}
+                          alt=""
+                          className="w-full object-contain rounded-[10%]"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </Slider>
             </div>

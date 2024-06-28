@@ -30,11 +30,7 @@ const HomeRecentBlogs02 = () => {
   ];
   return (
     <>
-      <section
-        className="py-6 md:py-[50px] lg:py-[100px]"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-      >
+      <section className="py-6 md:py-[50px] lg:py-[100px]">
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold py-2">
@@ -45,7 +41,11 @@ const HomeRecentBlogs02 = () => {
               project that inspires you and you customers.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            data-aos="fade-in"
+            data-aos-duration="3000"
+          >
             {blogs.map((blog) => (
               <Link to={`/blog/${blog.id}`} key={blog.id}>
                 <div className="w-full group overflow-hidden relative rounded-md">

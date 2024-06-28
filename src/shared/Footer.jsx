@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,44 +10,44 @@ const Footer = () => {
             <img src="logo-white.png" alt="" className="mb-6 w-56" />
             <ul className="flex flex-wrap justify-center items-center gap-3 md:gap-12">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-cyan-600 hover:text-cyan-500 transition-all duration-300"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/projects"
                   className="text-cyan-600 hover:text-cyan-500 transition-all duration-300"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services"
                   className="text-cyan-600 hover:text-cyan-500 transition-all duration-300"
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="text-cyan-600 hover:text-cyan-500 transition-all duration-300"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="text-cyan-600 hover:text-cyan-500 transition-all duration-300"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <p className="text-gray-300 mt-8">

@@ -8,7 +8,7 @@
 //     console.log(tabName);
 //   };
 
-//   const myFeaturedCourses = [
+//   const myQualityServices = [
 //     {
 //       id: 1,
 //       category: "trending",
@@ -67,13 +67,13 @@
 //     },
 //   ];
 
-//   const trendingCourses = myFeaturedCourses.filter(
+//   const trendingCourses = myQualityServices.filter(
 //     (course) => course.category === "trending"
 //   );
-//   const featuredCourses = myFeaturedCourses.filter(
+//   const featuredCourses = myQualityServices.filter(
 //     (course) => course.category === "featured"
 //   );
-//   const logodesignCourses = myFeaturedCourses.filter(
+//   const logodesignCourses = myQualityServices.filter(
 //     (course) => course.category === "logodesign"
 //   );
 
@@ -150,7 +150,7 @@
 //               }
 //             >
 //               <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5">
-//                 {myFeaturedCourses.map((data, index) => {
+//                 {myQualityServices.map((data, index) => {
 //                   return (
 //                     <>
 //                       <div
@@ -322,12 +322,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomeQualityService = () => {
-  const myFeaturedCourses = [
+  const myQualityServices = [
     {
       id: 1,
       category: "trending",
       thumbnail: "logodesign.png",
       title: "Logo Design",
+      link: "/all-logo-design",
       description: "Project was about precision and information.",
     },
     {
@@ -335,6 +336,7 @@ const HomeQualityService = () => {
       category: "trending",
       thumbnail: "branding.png",
       title: "Branding",
+      link: "/all-branding",
       description: "Project was about precision and information.",
     },
     {
@@ -342,6 +344,7 @@ const HomeQualityService = () => {
       category: "trending",
       thumbnail: "printdesign.png",
       title: "Print Design",
+      link: "/all-print-design",
       description: "Project was about precision and information.",
     },
     {
@@ -349,6 +352,7 @@ const HomeQualityService = () => {
       category: "featured",
       thumbnail: "socialmedia.png",
       title: "Social Media",
+      link: "/all-social-media",
       description: "Project was about precision and information.",
     },
     {
@@ -356,6 +360,7 @@ const HomeQualityService = () => {
       category: "logodesign",
       thumbnail: "animation.png",
       title: "Animation",
+      link: "/all-animation",
       description: "Project was about precision and information.",
     },
     {
@@ -363,17 +368,14 @@ const HomeQualityService = () => {
       category: "logodesign",
       thumbnail: "3dmodeling.png",
       title: "3D Modeling",
+      link: "/all-3d-modeling",
       description: "Project was about precision and information.",
     },
   ];
 
   return (
     <>
-      <section
-        className="py-6 md:py-[50px] lg:py-[100px]"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
-      >
+      <section className="py-6 md:py-[50px] lg:py-[100px]">
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold">
@@ -384,10 +386,14 @@ const HomeQualityService = () => {
               focussed solutions that connect billions of people
             </p>
           </div>
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {myFeaturedCourses.map((data, index) => {
+          <div
+            className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8"
+            data-aos="fade-in"
+            data-aos-duration="3000"
+          >
+            {myQualityServices.map((data, index) => {
               return (
-                <Link to="/services">
+                <Link to={data.link} key={data.id}>
                   <div
                     key={index}
                     className="border-2 border-gray-600 rounded-[10%] overflow-hidden"
