@@ -145,7 +145,7 @@ const HomeClientStories = () => {
                             />
                           </div>
                           <div className="mt-2 text-center">
-                            <h1 className="text-white text-lg font-bold">
+                            <h1 className="text-gradient text-lg font-bold">
                               {client.name}
                             </h1>
                             <p className="text-white text-sm">
