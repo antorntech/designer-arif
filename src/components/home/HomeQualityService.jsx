@@ -401,11 +401,13 @@ const HomeQualityService = () => {
                     <h1 className="text-white text-2xl text-center font-semibold p-5">
                       {data.title}
                     </h1>
-                    <img
-                      src={data.thumbnail}
-                      alt=""
-                      className="rounded-b-[10%] rounded-br-[10%] rounded-bl-[10%] w-full h-full object-fit"
-                    />
+                    <div className="overflow-hidden">
+                      <img
+                        src={data.thumbnail}
+                        alt=""
+                        className="rounded-b-[10%] rounded-br-[10%] rounded-bl-[10%] hover:scale-125 w-full h-full object-fit transition-all duration-500"
+                      />
+                    </div>
                   </div>
                 </Link>
               );
