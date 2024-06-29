@@ -102,12 +102,12 @@ const HomeRecentWork = () => {
               <Slider {...settings}>
                 {recentWorks.map((work, index) => (
                   <div key={index} className="w-full cursor-pointer">
-                    <div className="mx-3 rounded-[10%] border-2 border-gray-600">
+                    <div className="mx-3 rounded-[10%] border-2 border-gray-600 overflow-hidden">
                       <img
                         src={work.thumbnail}
                         alt=""
                         onClick={() => handleImageClick(work.thumbnail)}
-                        className="w-full object-contain rounded-[10%]"
+                        className="w-full object-contain rounded-[10%] hover:scale-125 transition-all duration-500"
                       />
                     </div>
                   </div>

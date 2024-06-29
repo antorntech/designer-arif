@@ -29,6 +29,9 @@ const BlogDetails = () => {
       comments: "No Comments",
     },
   ];
+
+  const tags = ["Logo Design", "Branding", "Social Media"];
+
   return (
     <>
       <PageHeader title={`Blog Details`} />
@@ -58,6 +61,22 @@ const BlogDetails = () => {
                 eaque delectus nesciunt sed nemo dicta distinctio magni non,
                 dolores dolore laborum aspernatur? Corporis.
               </p>
+              <div className="w-full h-[1px] my-5 bg-gradient-to-r from-[#4AF3E3] via-[#4AF3E3] to-[#4af38b]"></div>
+              <div className="flex items-center gap-3">
+                <p className="text-2xl font-semibold text-gray-300 my-3">
+                  Tags:
+                </p>
+                <div className="flex items-center gap-3">
+                  {tags.map((tag) => (
+                    <p
+                      key={tag}
+                      className="text-white bg-[#1d978b] p-1 px-3 rounded-md"
+                    >
+                      {tag}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="w-full">
               <h1 className="text-gradient text-2xl md:text-4xl font-bold mb-8">

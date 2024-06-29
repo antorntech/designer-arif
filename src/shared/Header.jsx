@@ -42,6 +42,10 @@ const Header = () => {
       path: "/services",
     },
     {
+      label: "Blogs",
+      path: "/blogs",
+    },
+    {
       label: "About",
       path: "/about",
     },
