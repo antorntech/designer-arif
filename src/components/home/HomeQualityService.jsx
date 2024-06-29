@@ -393,7 +393,7 @@ const HomeQualityService = () => {
           >
             {myQualityServices.map((data, index) => {
               return (
-                <Link to={data.link} key={data.id}>
+                <Link to={`/services${data.link}`} key={data.id}>
                   <div
                     key={index}
                     className="border-2 border-gray-600 rounded-[10%] overflow-hidden"
