@@ -13,7 +13,11 @@ const CustomModal = ({ isOpen, onClose, image }) => {
         <button onClick={onClose} className="absolute top-2 right-2 text-black">
           <i className="fa-solid fa-xmark text-[22px]"></i>
         </button>
-        <img src={image} alt="Selected" className="max-w-full max-h-full p-5" />
+        <img
+          src={image}
+          alt="Selected"
+          className="max-w-full max-h-full md:min-h-[500px] p-5"
+        />
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import CustomModal from "../custommodal/CustomModal";
 
 const HomeRecentWork = () => {
   var settings = {
@@ -65,6 +66,20 @@ const HomeRecentWork = () => {
       thumbnail: "recentWork05.png",
     },
   ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <section className="py-6 md:py-[50px] lg:py-[100px]">
@@ -86,23 +101,27 @@ const HomeRecentWork = () => {
             <div className="slider-container">
               <Slider {...settings}>
                 {recentWorks.map((work, index) => (
-                  <Link to="/projects">
-                    <div key={index} className="w-full">
-                      <div className="mx-3 rounded-[10%] border-2 border-gray-600">
-                        <img
-                          src={work.thumbnail}
-                          alt=""
-                          className="w-full object-contain rounded-[10%]"
-                        />
-                      </div>
+                  <div key={index} className="w-full cursor-pointer">
+                    <div className="mx-3 rounded-[10%] border-2 border-gray-600">
+                      <img
+                        src={work.thumbnail}
+                        alt=""
+                        onClick={() => handleImageClick(work.thumbnail)}
+                        className="w-full object-contain rounded-[10%]"
+                      />
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </Slider>
             </div>
           </div>
         </div>
       </section>
+      <CustomModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        image={selectedImage}
+      />
     </>
   );
 };
