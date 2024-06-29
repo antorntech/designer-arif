@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 export const ContactForm = () => {
   const [contactDetails, setContactDetails] = useState({
@@ -20,6 +21,7 @@ export const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(contactDetails);
+    toast.success("Message sent successfully");
     setContactDetails({
       firstName: "",
       lastName: "",

@@ -4,6 +4,8 @@ import AppRoutes from "../routes/AppRoutes";
 import Loader from "../loaders/Loader";
 import Footer from "../shared/Footer";
 import GoToTop from "../components/GoToTop/GoToTop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AppLayout = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -27,6 +29,7 @@ const AppLayout = () => {
           <Footer />
         </>
       )}
+      <ToastContainer />
     </>
   );
 };
