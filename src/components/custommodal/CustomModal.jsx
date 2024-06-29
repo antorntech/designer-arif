@@ -9,14 +9,17 @@ const CustomModal = ({ isOpen, onClose, image }) => {
       data-aos="fade-in"
       data-aos-duration="500"
     >
+      <button
+        onClick={onClose}
+        className="absolute flex justify-center items-center top-4 right-4 bg-slate-600 w-12 h-12 rounded-full"
+      >
+        <i className="fa-solid fa-xmark text-[22px] text-white"></i>
+      </button>
       <div className="relative bg-white p-4 rounded-md max-w-full max-h-full overflow-auto">
-        <button onClick={onClose} className="absolute top-2 right-2 text-black">
-          <i className="fa-solid fa-xmark text-[22px]"></i>
-        </button>
         <img
           src={image}
           alt="Selected"
-          className="max-w-full max-h-full md:min-h-[500px] p-5"
+          className="max-w-full max-h-full md:w-[1000px] md:min-h-[500px] p-5"
         />
       </div>
     </div>
