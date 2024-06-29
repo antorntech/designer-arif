@@ -19,7 +19,7 @@ const Loader = () => {
         <div></div>
       </div>
       <div>
-        <img src="s.png" alt="" className="w-[250px]" />
+        <img src="/images/s.png" alt="" className="w-[250px]" />
       </div>
     </div>
   );
