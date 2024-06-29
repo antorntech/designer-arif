@@ -8,6 +8,7 @@ import ScrlTopOfPage from "../components/scrlTopOfPage/ScrlTopOfPage";
 import Projects from "../pages/Projects";
 import SingleServices from "../pages/SingleServices";
 import SingleProject from "../pages/SingleProject";
+import BlogDetails from "../pages/BlogDetails";
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path="/projects/:id" element={<SingleProject />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:service" element={<SingleServices />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </>
