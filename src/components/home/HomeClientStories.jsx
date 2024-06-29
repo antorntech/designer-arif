@@ -49,8 +49,8 @@ const HomeClientStories = () => {
       icon: (
         <>
           <div className="flex items-center">
-            <i class="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i class="fa-solid fa-caret-right text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
           </div>
         </>
       ),
@@ -66,8 +66,8 @@ const HomeClientStories = () => {
       icon: (
         <>
           <div className="flex items-center">
-            <i class="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i class="fa-solid fa-caret-right text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
           </div>
         </>
       ),
@@ -83,8 +83,8 @@ const HomeClientStories = () => {
       icon: (
         <>
           <div className="flex items-center">
-            <i class="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i class="fa-solid fa-caret-right text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
           </div>
         </>
       ),
@@ -100,8 +100,8 @@ const HomeClientStories = () => {
       icon: (
         <>
           <div className="flex items-center">
-            <i class="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i class="fa-solid fa-caret-right text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
+            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
           </div>
         </>
       ),
@@ -149,11 +149,11 @@ const HomeClientStories = () => {
                             </p>
                           </div>
                           <div className="mt-4 flex justify-center items-center gap-2">
-                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
-                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
-                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
-                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
-                            <i class="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i className="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i className="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i className="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i className="fa-solid fa-star text-[22px] text-gradient"></i>
+                            <i className="fa-solid fa-star text-[22px] text-gradient"></i>
                           </div>
                           <div className="text-center mt-2">
                             <p className="text-white">{client.description}</p>

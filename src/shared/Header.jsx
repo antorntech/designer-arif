@@ -116,7 +116,7 @@ const Header = () => {
         >
           {myMenu.map((item) => (
             <Link
-              key={item.id}
+              key={item.path}
               onClick={() => setMenuOpen(!menuOpen)}
               to={item.path}
               className="text-[#929ba2] text-[18px] font-semibold hover:text-green-600 transition duration-300"

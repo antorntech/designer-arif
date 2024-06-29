@@ -118,7 +118,7 @@ const Works = () => {
                       aria-label="Submit"
                       className="flex aspect-square h-full items-center justify-center text-white"
                     >
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                   </div>
                 </div>
@@ -209,11 +209,11 @@ const Works = () => {
           </div>
           <div className="flex items-center gap-3 p-4">
             <div className="cursor-pointer flex items-center gap-1 border hover:bg-[#1FC211] text-black hover:text-white font-bold py-2 px-4 rounded transition duration-300">
-              <i class="fa-solid fa-chevron-left"></i>
+              <i className="fa-solid fa-chevron-left"></i>
               Prev.
             </div>
             <div className="cursor-pointer flex items-center gap-1 border hover:bg-[#1FC211] text-black hover:text-white font-bold py-2 px-4 rounded transition duration-300">
-              Next <i class="fa-solid fa-chevron-right"></i>
+              Next <i className="fa-solid fa-chevron-right"></i>
             </div>
           </div>
         </div>

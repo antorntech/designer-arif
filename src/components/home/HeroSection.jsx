@@ -4,15 +4,24 @@ import bannerAnimation from "../../assets/banner.json";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
+  const phoneNumber = "+8801996774893";
+  const message = "Hello, I'm interested in your work!";
+  const handleClick = () => {
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <>
-      <section class="h-screen md:h-[83vh]">
-        <div class="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div class="-mt-[45px] md:mt-0 mr-auto place-self-center lg:col-span-6">
-            <h1 class="text-gradient text-2xl md:text-4xl lg:text-6xl font-bold tracking-tight py-5">
+      <section className="h-screen md:h-[83vh]">
+        <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="-mt-[45px] md:mt-0 mr-auto place-self-center lg:col-span-6">
+            <h1 className="text-gradient text-2xl md:text-4xl lg:text-6xl font-bold tracking-tight py-5">
               Visualize Your Brand with Professional Design Solutions
             </h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               I break down complex user experinece problems to create integritiy
               focussed solutions that connect billions of people
             </p>
@@ -22,7 +31,7 @@ const HeroSection = () => {
                 className="border-[2px] border-[#60efff] px-8 py-4 hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] font-semibold rounded-full text-white w-full flex justify-center items-center md:w-[250px] gap-2 transition-all duration-300"
               >
                 <span>Contact With Me</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i className="fa-solid fa-arrow-right"></i>
               </Link>
               <div className="flex items-center gap-4">
                 <Link
@@ -30,25 +39,26 @@ const HeroSection = () => {
                   target="_blank"
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
-                  <i class="fa fa-solid fa-facebook text-white text-lg"></i>
+                  <i className="fa fa-solid fa-facebook text-white text-lg"></i>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/in/helloarif"
                   target="_blank"
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
-                  <i class="fa fa-solid fa-linkedin text-white text-lg"></i>
+                  <i className="fa fa-solid fa-linkedin text-white text-lg"></i>
                 </Link>
                 <Link
                   to="/"
+                  onClick={handleClick}
                   className="border-[2px] border-[#60efff] w-12 h-12 flex justify-center items-center hover:hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] hover:text-[#002E3D] font-semibold transition-all duration-300 rounded-full text-white"
                 >
-                  <i class="fa-brands fa-whatsapp text-white text-lg"></i>
+                  <i className="fa-brands fa-whatsapp text-white text-lg"></i>
                 </Link>
               </div>
             </div>
           </div>
-          <div class="lg:mt-0 lg:col-span-6 lg:flex">
+          <div className="lg:mt-0 lg:col-span-6 lg:flex">
             <img
               src="hero-banner02.png"
               alt="mockup"

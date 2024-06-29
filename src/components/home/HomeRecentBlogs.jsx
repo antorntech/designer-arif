@@ -62,11 +62,11 @@ const HomeRecentBlogs = () => {
                       <div className="w-full bg-[#002D3B] rounded-md px-4 py-2 group-hover:bg-gradient-to-r from-slate-900 to-cyan-900 transition-all duration-300">
                         <div className="flex items-center gap-5 pb-2">
                           <div className="flex items-center gap-2 text-[#3e6fb3] text-sm">
-                            <i class="fa-solid fa-calendar-days"></i>
+                            <i className="fa-solid fa-calendar-days"></i>
                             <p>{blog.date}</p>
                           </div>
                           <div className="flex items-center gap-2 text-[#3e6fb3] text-sm">
-                            <i class="fa-regular fa-comments"></i>
+                            <i className="fa-regular fa-comments"></i>
                             <p>{blog.comments}</p>
                           </div>
                         </div>

@@ -52,7 +52,7 @@ const About = () => {
                   className="mt-5 md:mt-8 border-[2px] border-[#60efff] px-8 py-4 hover:bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] font-semibold rounded-md text-white w-full flex justify-center items-center md:w-[250px] gap-2 transition-all duration-300"
                 >
                   <span>Contact With Me</span>
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
             </div>

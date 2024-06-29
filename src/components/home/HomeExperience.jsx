@@ -64,7 +64,7 @@ const HomeExperience = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="flex items-center gap-2">
-              <i class="fa-solid fa-medal text-gradient text-5xl"></i>
+              <i className="fa-solid fa-medal text-gradient text-5xl"></i>
               <h1 className="text-gradient text-2xl md:text-6xl font-bold">
                 My Experience
               </h1>
@@ -90,7 +90,7 @@ const HomeExperience = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <i class="fa-solid fa-graduation-cap text-gradient text-5xl"></i>
+              <i className="fa-solid fa-graduation-cap text-gradient text-5xl"></i>
               <h1 className="text-gradient text-2xl md:text-6xl font-bold">
                 My Certification
               </h1>

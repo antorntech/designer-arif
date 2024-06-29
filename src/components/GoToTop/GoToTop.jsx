@@ -31,7 +31,7 @@ const GoToTop = () => {
     <div className="wrapper">
       {isVisible && (
         <div className="top-btn" onClick={goToBtn}>
-          <i class="fa-solid fa-arrow-up top-btn--icon"></i>
+          <i className="fa-solid fa-arrow-up top-btn--icon"></i>
         </div>
       )}
     </div>

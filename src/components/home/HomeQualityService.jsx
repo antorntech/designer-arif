@@ -173,7 +173,7 @@
 //                           <p className="text-white w-full p-3 text-center">
 //                             {data.description}
 //                           </p>
-//                           <button class="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
+//                           <button className="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
 //                             Read More
 //                           </button>
 //                         </div>
@@ -215,7 +215,7 @@
 //                           <p className="text-white w-full p-3 text-center">
 //                             {data.description}
 //                           </p>
-//                           <button class="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
+//                           <button className="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
 //                             Read More
 //                           </button>
 //                         </div>
@@ -257,7 +257,7 @@
 //                           <p className="text-white w-full p-3 text-center">
 //                             {data.description}
 //                           </p>
-//                           <button class="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
+//                           <button className="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
 //                             Read More
 //                           </button>
 //                         </div>
@@ -299,7 +299,7 @@
 //                           <p className="text-white w-full p-3 text-center">
 //                             {data.description}
 //                           </p>
-//                           <button class="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
+//                           <button className="border border-zinc-100 mt-1 bg-zink-700 text-gray-100 hover:text-zinc-200 backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(121,121,121,0.16)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-zinc-400 duration-700">
 //                             Read More
 //                           </button>
 //                         </div>
