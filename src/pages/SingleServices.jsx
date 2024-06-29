@@ -1,43 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/pageheader/PageHeader";
 import { Link, useLocation } from "react-router-dom";
+import CustomModal from "../components/custommodal/CustomModal";
 
 const SingleServices = () => {
   const alllogodesigns = [
     {
       id: 2,
       name: "Logo Design 1",
-      thumbnail: "/images/logodesign01.png",
+      thumbnail: "/images/logodesign01.jpg",
       link: "/",
     },
     {
       id: 1,
       name: "Logo Design 2",
-      thumbnail: "/images/logodesign02.png",
+      thumbnail: "/images/logodesign02.jpg",
       link: "/",
     },
     {
       id: 3,
       name: "Logo Design 3",
-      thumbnail: "/images/logodesign03.png",
+      thumbnail: "/images/logodesign03.jpg",
       link: "/",
     },
     {
       id: 4,
       name: "Logo Design 4",
-      thumbnail: "/images/logodesign04.png",
+      thumbnail: "/images/logodesign04.jpg",
       link: "/",
     },
     {
       id: 5,
       name: "Logo Design 5",
-      thumbnail: "/images/logodesign01.png",
+      thumbnail: "/images/logodesign01.jpg",
       link: "/",
     },
     {
       id: 6,
       name: "Logo Design 6",
-      thumbnail: "/images/logodesign02.png",
+      thumbnail: "/images/logodesign02.jpg",
       link: "/",
     },
   ];
@@ -261,6 +262,19 @@ const SingleServices = () => {
     dataToRender = all3dModeling;
   }
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <PageHeader title={extractedPath} />
@@ -269,10 +283,14 @@ const SingleServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dataToRender.length > 0 ? (
               dataToRender.map((data) => (
-                <Link to={data.link} key={data.id} className="w-full h-full">
-                  <div className="w-full group overflow-hidden relative rounded-md">
+                <div
+                  key={data.id}
+                  className="w-full h-full cursor-pointer"
+                  onClick={() => handleImageClick(data.thumbnail)}
+                >
+                  <div className="w-full md:w-[350px] md:h-[300px] mx-auto group overflow-hidden relative rounded-md">
                     <img
-                      src={data?.thumbnail}
+                      src={data.thumbnail}
                       className="w-full group-hover:scale-125 transition-all duration-300"
                       alt={data.name}
                     />
@@ -286,7 +304,7 @@ const SingleServices = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))
             ) : (
               <p>No data available for the current path.</p>
@@ -294,6 +312,12 @@ const SingleServices = () => {
           </div>
         </div>
       </section>
+
+      <CustomModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        image={selectedImage}
+      />
     </>
   );
 };
