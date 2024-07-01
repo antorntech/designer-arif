@@ -1,0 +1,27 @@
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #2cf7bf;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s linear;
+  z-index: 9999;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2cf7bf;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s linear;
+  z-index: 9999;
+}

@@ -10,11 +10,13 @@ import SingleServices from "../pages/SingleServices";
 import SingleProject from "../pages/SingleProject";
 import BlogDetails from "../pages/BlogDetails";
 import Blogs from "../pages/Blogs";
+import AnimatedCursor from "../components/AnimatedCursor/AnimatedCursor";
 
 const AppRoutes = () => {
   return (
     <>
       <ScrlTopOfPage />
+      <AnimatedCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
