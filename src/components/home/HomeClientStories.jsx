@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const HomeClientStories = () => {
+  const [clientsSays, setclientsSays] = useState([]);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/reviews")
+      .then((res) => res.json())
+      .then((data) => setclientsSays(data));
+  }, []);
   var settings = {
     dots: true,
     infinite: true,
@@ -42,76 +48,6 @@ const HomeClientStories = () => {
     ],
   };
 
-  const clientsSays = [
-    {
-      id: 1,
-      name: "John Smith",
-      icon: (
-        <>
-          <div className="flex items-center">
-            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
-          </div>
-        </>
-      ),
-      avatar: "client01.png",
-      clientLogo: "clientlogo01.png",
-      designation: "SEO Specialist, Theme Junction",
-      description:
-        "“Taylor is a professional Designer he really helps my business by providing value to my business.",
-    },
-    {
-      id: 2,
-      name: "John Smith",
-      icon: (
-        <>
-          <div className="flex items-center">
-            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
-          </div>
-        </>
-      ),
-      avatar: "client02.png",
-      clientLogo: "clientlogo02.png",
-      designation: "SEO Specialist, Theme Junction",
-      description:
-        "“Taylor is a professional Designer he really helps my business by providing value to my business.",
-    },
-    {
-      id: 3,
-      name: "John Smith",
-      icon: (
-        <>
-          <div className="flex items-center">
-            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
-          </div>
-        </>
-      ),
-      avatar: "client01.png",
-      clientLogo: "clientlogo01.png",
-      designation: "SEO Specialist, Theme Junction",
-      description:
-        "“Taylor is a professional Designer he really helps my business by providing value to my business.",
-    },
-    {
-      id: 4,
-      name: "John Smith",
-      icon: (
-        <>
-          <div className="flex items-center">
-            <i className="fa-solid fa-caret-left text-gradient text-5xl"></i>
-            <i className="fa-solid fa-caret-right text-gradient text-5xl"></i>
-          </div>
-        </>
-      ),
-      avatar: "client02.png",
-      clientLogo: "clientlogo02.png",
-      designation: "SEO Specialist, Theme Junction",
-      description:
-        "“Taylor is a professional Designer he really helps my business by providing value to my business.",
-    },
-  ];
   return (
     <>
       <section className="py-6 md:py-[50px] lg:py-[100px]">
@@ -135,7 +71,7 @@ const HomeClientStories = () => {
                         <div className="pb-28 flex flex-col justify-center items-center">
                           <div className="bg-gradient-to-r from-[#5BEFF9] via-[#38F6CD] to-[#04FE8C] rounded-full p-[2px]">
                             <img
-                              src={client.avatar}
+                              src={`https://api.designerarif.com/${client.avatar}`}
                               alt="client"
                               className="w-20 h-20 object-cover rounded-full"
                             />
@@ -156,7 +92,7 @@ const HomeClientStories = () => {
                             <i className="fa-solid fa-star text-[22px] text-gradient"></i>
                           </div>
                           <div className="text-center mt-2">
-                            <p className="text-white">{client.description}</p>
+                            <p className="text-white">{client.review}</p>
                           </div>
                         </div>
                       </div>

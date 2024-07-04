@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 import CustomModal from "../custommodal/CustomModal";
 
 const HomeRecentWork = () => {
+  const [data, setData] = useState([]);
+  const recentWorks = [...data].reverse().slice(0, 5);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/services")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
   var settings = {
     dots: true,
     infinite: true,
@@ -44,29 +51,6 @@ const HomeRecentWork = () => {
     ],
   };
 
-  const recentWorks = [
-    {
-      id: 1,
-      thumbnail: "recentWork01.png",
-    },
-    {
-      id: 2,
-      thumbnail: "recentWork02.png",
-    },
-    {
-      id: 3,
-      thumbnail: "recentWork03.png",
-    },
-    {
-      id: 4,
-      thumbnail: "recentWork04.png",
-    },
-    {
-      id: 5,
-      thumbnail: "recentWork05.png",
-    },
-  ];
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -98,17 +82,19 @@ const HomeRecentWork = () => {
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            <div className="slider-container">
+            <div className="slider-container w-full">
               <Slider {...settings}>
                 {recentWorks.map((work, index) => (
-                  <div key={index} className="w-full cursor-pointer">
-                    <div className="mx-3 rounded-[10%] border-2 border-gray-600 overflow-hidden">
-                      <img
-                        src={work.thumbnail}
-                        alt=""
-                        onClick={() => handleImageClick(work.thumbnail)}
-                        className="w-full object-contain rounded-[10%] hover:scale-125 transition-all duration-500"
-                      />
+                  <div key={index} className="px-2">
+                    <div className="w-full cursor-pointer">
+                      <div className="mx-3 h-72 sm:h-96 rounded-lg border-2 border-gray-600 overflow-hidden">
+                        <img
+                          src={`https://api.designerarif.com/${work.thumbnail}`}
+                          alt=""
+                          onClick={() => handleImageClick(work.thumbnail)}
+                          className="w-full h-full object-cover rounded-lg hover:scale-125 transition-all duration-500"
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}

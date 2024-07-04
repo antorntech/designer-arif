@@ -33,7 +33,9 @@ const HomeContacts = () => {
                 </div>
                 <div className="text-white">
                   <p>Phone</p>
-                  <h2 className="text-xl font-semibold">+01 123 654 8096</h2>
+                  <h2 className="text-md md:text-xl font-semibold">
+                    +880 1996 774 893
+                  </h2>
                 </div>
               </div>
               <div className="flex items-start gap-5">
@@ -42,8 +44,8 @@ const HomeContacts = () => {
                 </div>
                 <div className="text-white">
                   <p>Email</p>
-                  <h2 className="text-xl font-semibold">
-                    artistarif@gmail.com
+                  <h2 className="text-md md:text-xl font-semibold">
+                    helloarif200@gmail.com
                   </h2>
                 </div>
               </div>
@@ -53,7 +55,7 @@ const HomeContacts = () => {
                 </div>
                 <div className="text-white">
                   <p>Address</p>
-                  <h2 className="text-xl font-semibold">
+                  <h2 className="text-md md:text-xl font-semibold">
                     Dhanmondi 32, Shukrabad <br />
                     Dhaka, Bangladesh
                   </h2>
@@ -67,13 +69,13 @@ const HomeContacts = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-5">
                   <Link to="https://www.behance.net/helloarif" target="_blank">
-                    <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
+                    <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i className="fa-brands fa-behance text-2xl text-[#4AF3E3]"></i>
                       <span className="text-2xl">Behance</span>
                     </div>
                   </Link>
                   <Link to="https://dribbble.com/helloarif" target="_blank">
-                    <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
+                    <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i className="fa-solid fa-basketball text-2xl text-[#ff00dd]"></i>
                       <span className="text-2xl">Dribble</span>
                     </div>
@@ -84,7 +86,7 @@ const HomeContacts = () => {
                     to="https://www.linkedin.com/in/helloarif"
                     target="_blank"
                   >
-                    <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
+                    <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i className="fa-brands fa-linkedin text-2xl text-[#4ac9fc]"></i>
                       <span className="text-2xl">Linkedin</span>
                     </div>
@@ -93,7 +95,7 @@ const HomeContacts = () => {
                     to="https://www.instagram.com/helloarif200"
                     target="_blank"
                   >
-                    <div className="w-[300px] md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
+                    <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
                       <i className="fa-brands fa-instagram text-2xl text-[#722127]"></i>
                       <span className="text-2xl">Instagram</span>
                     </div>

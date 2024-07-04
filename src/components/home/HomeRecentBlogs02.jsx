@@ -1,33 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const HomeRecentBlogs02 = () => {
-  const blogs = [
-    {
-      id: 1,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "blog01.jpg",
-      comments: "No Comments",
-    },
-    {
-      id: 2,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "blog02.jpg",
-      comments: "No Comments",
-    },
-    {
-      id: 3,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "blog03.jpg",
-      comments: "No Comments",
-    },
-  ];
+  const [recentBlogs, setRecentBlogs] = useState([]);
+  console.log(recentBlogs);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/blogs/recent")
+      .then((res) => res.json())
+      .then((data) => setRecentBlogs(data));
+  }, []);
+
   return (
     <>
       <section className="py-6 md:py-[50px] lg:py-[100px]">
@@ -46,11 +28,11 @@ const HomeRecentBlogs02 = () => {
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            {blogs.map((blog) => (
-              <Link to={`/blog/${blog.id}`} key={blog.id}>
+            {recentBlogs.map((blog, index) => (
+              <Link to={`/blog/${blog?._id}`} key={index}>
                 <div className="w-full group overflow-hidden relative rounded-md">
                   <img
-                    src={blog.thumbnail}
+                    src={`https://api.designerarif.com/${blog?.banner}`}
                     className="w-full group-hover:scale-125 transition-all duration-300"
                     alt=""
                   />
@@ -58,7 +40,7 @@ const HomeRecentBlogs02 = () => {
                     <div className="flex flex-col items-start justify-end gap-5 h-full">
                       <div className="w-full px-4 py-2">
                         <h2 className="text-white text-2xl font-semibold">
-                          {blog.title}
+                          {blog?.title.slice(0, 20)}...
                         </h2>
                       </div>
                     </div>

@@ -17,7 +17,7 @@ const CustomModal = ({ isOpen, onClose, image }) => {
       </button>
       <div className="relative bg-white p-4 rounded-md max-w-full max-h-full overflow-auto">
         <img
-          src={image}
+          src={`https://api.designerarif.com/${image}`}
           alt="Selected"
           className="max-w-full max-h-full md:w-[1000px] md:min-h-[500px] p-5"
         />

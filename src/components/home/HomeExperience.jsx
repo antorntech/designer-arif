@@ -1,59 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const HomeExperience = () => {
-  const experiences = [
-    {
-      id: 1,
-      date: "2022 - Present",
-      title: "UI/UX Designer",
-      location: "Blockdots, London",
-    },
-    {
-      id: 2,
-      date: "2021 - 2022",
-      title: "Logo Design Course",
-      location: "Parsons, The New School",
-    },
-    {
-      id: 3,
-      date: "2020 - 2021",
-      title: "Senior Graphic Designer",
-      location: "House of Life, Leeds",
-    },
-    {
-      id: 4,
-      date: "2018 - 2020",
-      title: "Junior Graphic Designer",
-      location: "Theme Junction, Bursa",
-    },
-  ];
+  const [experiences, setExperiences] = useState([]);
+  const [certifications, setCertifications] = useState([]);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/experience")
+      .then((res) => res.json())
+      .then((data) => setExperiences(data));
+  }, []);
 
-  const educations = [
-    {
-      id: 1,
-      date: "2022 - Present",
-      title: "UI/UX Designer",
-      location: "Blockdots, London",
-    },
-    {
-      id: 2,
-      date: "2021 - 2022",
-      title: "Logo Designer",
-      location: "Parsons, The New School",
-    },
-    {
-      id: 3,
-      date: "2020 - 2021",
-      title: "UI/UX Design Course",
-      location: "House of Life, Leeds",
-    },
-    {
-      id: 4,
-      date: "2018 - 2020",
-      title: "Logo Design Course",
-      location: "Theme Junction, Bursa",
-    },
-  ];
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/certification")
+      .then((res) => res.json())
+      .then((data) => setCertifications(data));
+  }, []);
+
   return (
     <section
       className="py-6 md:py-[50px] lg:py-[100px]"
@@ -74,10 +35,10 @@ const HomeExperience = () => {
                 return (
                   <div
                     className="w-full mt-3 blurry p-5 hover:bg-slate-800 transition-all duration-300"
-                    key={experience.id}
+                    key={experience._id}
                   >
                     <p className="text-white font-semibold">
-                      {experience.date}
+                      {experience.starttime} - {experience.endtime}
                     </p>
                     <p className="text-gradient text-xl md:text-3xl">
                       {experience.title}
@@ -96,17 +57,19 @@ const HomeExperience = () => {
               </h1>
             </div>
             <div className="w-full mt-8 flex flex-col items-center gap-5">
-              {educations.map((education) => {
+              {certifications.map((certification) => {
                 return (
                   <div
                     className="w-full mt-3 blurry p-5 hover:bg-slate-800 transition-all duration-300"
-                    key={education.id}
+                    key={certification._id}
                   >
-                    <p className="text-white font-semibold">{education.date}</p>
-                    <p className="text-gradient text-xl md:text-3xl">
-                      {education.title}
+                    <p className="text-white font-semibold">
+                      {certification.starttime} - {certification.endtime}
                     </p>
-                    <p className="text-white">{education.location}</p>
+                    <p className="text-gradient text-xl md:text-3xl">
+                      {certification.title}
+                    </p>
+                    <p className="text-white">{certification.location}</p>
                   </div>
                 );
               })}

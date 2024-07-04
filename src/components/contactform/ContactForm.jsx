@@ -3,10 +3,10 @@ import { toast } from "react-toastify";
 
 export const ContactForm = () => {
   const [contactDetails, setContactDetails] = useState({
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     email: "",
-    phoneNumber: "",
+    phone: "",
     subject: "Logo Design",
     message: "",
   });
@@ -21,12 +21,27 @@ export const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(contactDetails);
-    toast.success("Message sent successfully");
+    fetch("https://api.designerarif.com/api/v1/contact/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.status === "success") {
+          toast.success("Message sent successfully");
+        } else {
+          toast.error("Something went wrong");
+        }
+      });
+
     setContactDetails({
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
-      phoneNumber: "",
+      phone: "",
       subject: "Logo Design",
       message: "",
     });
@@ -38,8 +53,8 @@ export const ContactForm = () => {
           <input
             className="w-full p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
             type="text"
-            name="firstName"
-            value={contactDetails.firstName}
+            name="firstname"
+            value={contactDetails.firstname}
             onChange={handleChange}
             required
             placeholder="First Name"
@@ -47,8 +62,8 @@ export const ContactForm = () => {
           <input
             className="w-full p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
             type="text"
-            name="lastName"
-            value={contactDetails.lastName}
+            name="lastname"
+            value={contactDetails.lastname}
             onChange={handleChange}
             required
             placeholder="Last Name"
@@ -67,8 +82,8 @@ export const ContactForm = () => {
           <input
             className="w-full mt-3 p-3 rounded-md bg-[#002d3b80] border-[1px] border-gray-700 text-white focus:outline-none focus:border-[#4AF3E3] focus:ring-1 focus:ring-[#4AF3E3]"
             type="text"
-            name="phoneNumber"
-            value={contactDetails.phoneNumber}
+            name="phone"
+            value={contactDetails.phone}
             onChange={handleChange}
             required
             placeholder="Phone Number"

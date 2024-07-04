@@ -1,36 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/pageheader/PageHeader";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const BlogDetails = () => {
-  const recentblogs = [
-    {
-      id: 1,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "/images/blog01.jpg",
-      comments: "No Comments",
-    },
-    {
-      id: 2,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "/images/blog02.jpg",
-      comments: "No Comments",
-    },
-    {
-      id: 3,
-      title: "How to use React Hooks in React Native",
-      category: "Logo Design",
-      date: "2022-01-01",
-      thumbnail: "/images/blog03.jpg",
-      comments: "No Comments",
-    },
-  ];
+  const { id } = useParams();
 
-  const tags = ["Logo Design", "Branding", "Social Media"];
+  const [blog, setBlog] = useState({});
+  const [recentBlogs, setRecentBlogs] = useState([]);
+  const [tags, setTags] = useState(null); // Initialize tags as null initially
+
+  useEffect(() => {
+    fetch(`https://api.designerarif.com/api/v1/blogs/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBlog(data);
+        // Extract tags from the single string element
+        if (data.tags) {
+          setTags(data.tags[0]?.split(","));
+        }
+      });
+  }, [id]);
+
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/blogs/recent")
+      .then((res) => res.json())
+      .then((data) => setRecentBlogs(data));
+  }, []);
 
   return (
     <>
@@ -40,26 +35,15 @@ const BlogDetails = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="col-span-2 w-full">
               <img
-                src="/blogdetailsbanner.png"
+                src={`https://api.designerarif.com/${blog?.banner}`}
                 alt=""
                 className="w-full rounded-md"
               />
               <h1 className="text-white text-2xl md:text-4xl font-bold mt-8">
-                How to use React Hooks in React Native
+                {blog?.title}
               </h1>
               <p className="text-sm md:text-base text-gray-300 mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-                placeat! Similique ducimus incidunt unde soluta, ipsa minima in
-                deserunt pariatur cumque quod ex illo asperiores nam dignissimos
-                nulla assumenda maxime quo voluptatum ratione saepe fugit amet.
-                Voluptatibus corrupti sint impedit doloribus incidunt architecto
-                culpa quam, illo deleniti ipsum, dolor libero dicta praesentium
-                animi laborum rerum iure rem dolore aliquid, qui eaque
-                voluptatem laudantium. Debitis vel cupiditate tempora
-                repellendus ipsum dolores, eos aperiam fugiat pariatur, in ea
-                nobis? Accusamus eos a adipisci nam consequatur soluta iste cum
-                eaque delectus nesciunt sed nemo dicta distinctio magni non,
-                dolores dolore laborum aspernatur? Corporis.
+                {blog?.description}
               </p>
               <div className="w-full h-[1px] my-5 bg-gradient-to-r from-[#4AF3E3] via-[#4AF3E3] to-[#4af38b]"></div>
               <div className="flex items-center gap-3">
@@ -67,14 +51,15 @@ const BlogDetails = () => {
                   Tags:
                 </p>
                 <div className="flex items-center gap-3">
-                  {tags.map((tag) => (
-                    <p
-                      key={tag}
-                      className="text-white bg-[#1d978b] p-1 px-3 rounded-md"
-                    >
-                      {tag}
-                    </p>
-                  ))}
+                  {tags &&
+                    tags.map((tag, index) => (
+                      <p
+                        key={index}
+                        className="text-white bg-[#1d978b] p-1 px-3 rounded-md"
+                      >
+                        {tag}
+                      </p>
+                    ))}
                 </div>
               </div>
             </div>
@@ -83,12 +68,12 @@ const BlogDetails = () => {
                 Recent Blogs
               </h1>
               <div className="grid grid-cols-1 gap-8">
-                {recentblogs.map((blog) => (
-                  <Link key={blog.id} to={`/blog/${blog.id}`}>
+                {recentBlogs.map((blog, index) => (
+                  <Link key={blog._id} to={`/blog/${blog._id}`}>
                     <div key={blog.id} className="grid grid-cols-3 gap-5">
                       <div className="col-span-1 w-full">
                         <img
-                          src={blog.thumbnail}
+                          src={`https://api.designerarif.com/${blog.banner}`}
                           alt=""
                           className="w-full rounded-md"
                         />
@@ -98,7 +83,7 @@ const BlogDetails = () => {
                           <h1 className="text-md text-white">{blog.title}</h1>
                           <div className="flex items-center justify-between">
                             <p className="text-gray-400">Arif Hossain</p>
-                            <p className="text-gray-400">8 Aug, 2022</p>
+                            <p className="text-gray-400">{blog.date}</p>
                           </div>
                         </div>
                       </div>

@@ -1,45 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 
 const HomeSkills = () => {
-  const skills = [
-    {
-      id: 1,
-      title: "Photoshop",
-      img: "photoshop.png",
-      percentage: 95,
-    },
-    {
-      id: 2,
-      title: "Illustrator",
-      img: "illustrator.png",
-      percentage: 90,
-    },
-    {
-      id: 3,
-      title: "Figma",
-      img: "figma.png",
-      percentage: 80,
-    },
-    {
-      id: 4,
-      title: "Premiere",
-      img: "premiere.png",
-      percentage: 70,
-    },
-    {
-      id: 5,
-      title: "Adobe XD",
-      img: "xd.png",
-      percentage: 60,
-    },
-    {
-      id: 6,
-      title: "InDesign",
-      img: "indesign.png",
-      percentage: 50,
-    },
-  ];
+  const [skills, setSkills] = useState([]);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/skills")
+      .then((res) => res.json())
+      .then((data) => setSkills(data));
+  }, []);
+
   return (
     <section className="py-6 md:py-[50px] lg:py-[100px]">
       <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
@@ -65,12 +34,12 @@ const HomeSkills = () => {
               <div className="w-full text-center">
                 <div className="blurry group p-5 hover:bg-slate-800 transition-all duration-300 flex flex-col items-center gap-2">
                   <img
-                    src={skill.img}
+                    src={`https://api.designerarif.com/${skill.skillphoto}`}
                     alt=""
                     className="w-20 h-20 group-hover:grayscale group-hover:scale-[1.1] transition-all duration-300"
                   />
                   <CountUp
-                    end={skill.percentage}
+                    end={skill.percentance}
                     duration={5}
                     suffix="%"
                     className="text-white text-xl mt-3"
