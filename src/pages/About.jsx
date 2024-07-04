@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/pageheader/PageHeader";
 import { Link } from "react-router-dom";
 
 const About = () => {
+  const [about, setAbout] = useState([]);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/about")
+      .then((res) => res.json())
+      .then((data) => setAbout(data));
+  }, []);
+
   return (
     <>
       <PageHeader title="About" />
@@ -21,30 +28,22 @@ const About = () => {
                 Hello, I'm <span className="text-gradient">Arif Hossain</span>
               </h1>
               <p className="text-gray-400 mt-3 md:mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis obcaecati iste amet fuga at expedita debitis? Minus,
-                modi? Omnis, quas nesciunt in esse pariatur libero id sunt
-                laborum culpa voluptatem saepe ex illo eaque dolor optio facere
-                adipisci vero. Maxime.
+                {about[0]?.description}
               </p>
               <div className="mt-3 md:mt-5">
                 <table>
                   <tr className="text-gray-200  text-lg">
-                    <td>Name</td> <td className="pl-5">: Arif Hossain</td>
-                  </tr>
-                  <tr className="text-gray-200 text-lg">
-                    <td>Age</td> <td className="pl-5">: 26</td>
+                    <td>Name</td> <td className="pl-5">: {about[0]?.name}</td>
                   </tr>
                   <tr className="text-gray-200 text-lg">
                     <td>Address</td>{" "}
-                    <td className="pl-5">: Dhanmondi 32, Dhaka, Bangladesh</td>
+                    <td className="pl-5">: {about[0]?.address}</td>
                   </tr>
                   <tr className="text-gray-200 text-lg">
-                    <td>Phone</td> <td className="pl-5">: +880 123 456 789</td>
+                    <td>Phone</td> <td className="pl-5">: {about[0]?.phone}</td>
                   </tr>
                   <tr className="text-gray-200 text-lg">
-                    <td>Email</td>{" "}
-                    <td className="pl-5">: arifhossain@gmail.com</td>
+                    <td>Email</td> <td className="pl-5">: {about[0]?.email}</td>
                   </tr>
                 </table>
                 <Link

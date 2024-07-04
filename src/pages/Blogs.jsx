@@ -21,7 +21,7 @@ const Blogs = () => {
                 <div className="w-full group overflow-hidden relative rounded-md">
                   <img
                     src={`https://api.designerarif.com/${blog?.banner}`}
-                    className="w-full group-hover:scale-125 transition-all duration-300"
+                    className="w-full md:w-[410px] md:h-[370px] group-hover:scale-125 transition-all duration-300"
                     alt=""
                   />
                   <div className="w-full h-full p-5 absolute bottom-[-5px] left-0 bg-gradient-to-t from-[#002D3B] via-[#002d3bb0] to-transparent">
