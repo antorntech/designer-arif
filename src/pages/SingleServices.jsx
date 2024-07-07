@@ -84,24 +84,26 @@ const SingleServices = () => {
         <div className="w-full h-full max-w-screen-xl mx-auto px-4 py-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dataToRender.length > 0 ? (
-              dataToRender.map((data) => (
+              dataToRender.map((data, index) => (
                 <div
                   key={data.id}
                   className="w-full h-full cursor-pointer"
                   onClick={() => handleImageClick(data.thumbnail)}
                 >
-                  <div className="w-full md:w-[350px] md:h-[300px] mx-auto group overflow-hidden relative rounded-md">
-                    <img
-                      src={`https://api.designerarif.com/${data.thumbnail}`}
-                      className="w-full h-full group-hover:scale-125 transition-all duration-300"
-                      alt={data.name}
-                    />
-                    <div className="w-full h-full p-5 absolute bottom-[-5px] left-0 bg-gradient-to-t from-[#002D3B] via-[#002d3b56] to-transparent">
-                      <div className="flex flex-col items-start justify-end gap-5 h-full">
-                        <div className="w-full px-4 py-2">
-                          <h2 className="text-white text-2xl font-semibold">
-                            {data.name}
-                          </h2>
+                  <div key={index} className="px-2">
+                    <div className="w-full cursor-pointer">
+                      <div className="group relative mx-3 h-72 sm:h-96 rounded-lg border-2 border-gray-600 overflow-hidden">
+                        <img
+                          src={`https://api.designerarif.com/${data.thumbnail}`}
+                          alt=""
+                          className="w-full h-full object-cover rounded-lg group-hover:scale-125 transition-all duration-500"
+                        />
+                        <div className="w-full h-full bg-gradient-to-t from-[#002D3B] via-[#002d3bb0] to-[#002D3B] absolute top-0 left-0 rounded-lg hover:scale-125 transition-all duration-500">
+                          <div className="w-full h-full flex items-center justify-center">
+                            <h1 className="text-white text-2xl font-bold">
+                              {data.title}
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -125,3 +127,17 @@ const SingleServices = () => {
 };
 
 export default SingleServices;
+
+{
+  /* <div key={index} className="px-2">
+  <div className="w-full cursor-pointer">
+    <div className="mx-3 h-72 sm:h-96 rounded-lg border-2 border-gray-600 overflow-hidden">
+      <img
+        src={`https://api.designerarif.com/${data.thumbnail}`}
+        alt=""
+        className="w-full h-full object-cover rounded-lg hover:scale-125 transition-all duration-500"
+      />
+    </div>
+  </div>
+</div>; */
+}
