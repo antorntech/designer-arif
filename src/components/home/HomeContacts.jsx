@@ -96,7 +96,7 @@ const HomeContacts = () => {
                     target="_blank"
                   >
                     <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
-                      <i className="fa-brands fa-instagram text-2xl text-[#722127]"></i>
+                      <i className="fa-brands fa-instagram text-2xl text-[#ab2eca]"></i>
                       <span className="text-2xl">Instagram</span>
                     </div>
                   </Link>
