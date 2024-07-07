@@ -1,242 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/pageheader/PageHeader";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CustomModal from "../components/custommodal/CustomModal";
 
 const SingleServices = () => {
-  const alllogodesigns = [
-    {
-      id: 2,
-      name: "Logo Design 1",
-      thumbnail: "/images/logodesign01.jpg",
-      link: "/",
-    },
-    {
-      id: 1,
-      name: "Logo Design 2",
-      thumbnail: "/images/logodesign02.jpg",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "Logo Design 3",
-      thumbnail: "/images/logodesign03.jpg",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "Logo Design 4",
-      thumbnail: "/images/logodesign04.jpg",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "Logo Design 5",
-      thumbnail: "/images/logodesign01.jpg",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "Logo Design 6",
-      thumbnail: "/images/logodesign02.jpg",
-      link: "/",
-    },
-  ];
+  const [data, setData] = useState([]);
+  console.log(data);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/services")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
 
-  const allbrandings = [
-    {
-      id: 1,
-      name: "Branding 1",
-      thumbnail: "/images/branding01.png",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "Branding 2",
-      thumbnail: "/images/branding02.png",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "Branding 3",
-      thumbnail: "/images/branding03.png",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "Branding 4",
-      thumbnail: "/images/branding04.png",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "Branding 5",
-      thumbnail: "/images/branding01.png",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "Branding 6",
-      thumbnail: "/images/branding02.png",
-      link: "/",
-    },
-  ];
+  const alllogodesigns = [];
 
-  const allPrintDesigns = [
-    {
-      id: 1,
-      name: "Print Design 1",
-      thumbnail: "/images/printdesign01.png",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "Print Design 2",
-      thumbnail: "/images/printdesign02.png",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "Print Design 3",
-      thumbnail: "/images/printdesign03.png",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "Print Design 4",
-      thumbnail: "/images/printdesign04.png",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "Print Design 5",
-      thumbnail: "/images/printdesign01.png",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "Print Design 6",
-      thumbnail: "/images/printdesign02.png",
-      link: "/",
-    },
-  ];
+  const allbrandings = [];
 
-  const allSocialMedia = [
-    {
-      id: 1,
-      name: "Social Media 1",
-      thumbnail: "/images/socialmedia01.png",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "Social Media 2",
-      thumbnail: "/images/socialmedia02.png",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "Social Media 3",
-      thumbnail: "/images/socialmedia03.png",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "Social Media 4",
-      thumbnail: "/images/socialmedia04.png",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "Social Media 5",
-      thumbnail: "/images/socialmedia01.png",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "Social Media 6",
-      thumbnail: "/images/socialmedia02.png",
-      link: "/",
-    },
-  ];
+  const allPrintDesigns = [];
 
-  const allAnimations = [
-    {
-      id: 1,
-      name: "Animation 1",
-      thumbnail: "/images/animation01.png",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "Animation 2",
-      thumbnail: "/images/animation02.png",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "Animation 3",
-      thumbnail: "/images/animation03.png",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "Animation 4",
-      thumbnail: "/images/animation04.png",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "Animation 5",
-      thumbnail: "/images/animation01.png",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "Animation 6",
-      thumbnail: "/images/animation02.png",
-      link: "/",
-    },
-  ];
+  const allSocialMedia = [];
 
-  const all3dModeling = [
-    {
-      id: 1,
-      name: "3dmodeling 1",
-      thumbnail: "/images/3dmodeling01.png",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "3dmodeling 2",
-      thumbnail: "/images/3dmodeling02.png",
-      link: "/",
-    },
-    {
-      id: 3,
-      name: "3dmodeling 3",
-      thumbnail: "/images/3dmodeling03.png",
-      link: "/",
-    },
-    {
-      id: 4,
-      name: "3dmodeling 4",
-      thumbnail: "/images/3dmodeling04.png",
-      link: "/",
-    },
-    {
-      id: 5,
-      name: "3dmodeling 5",
-      thumbnail: "/images/3dmodeling01.png",
-      link: "/",
-    },
-    {
-      id: 6,
-      name: "3dmodeling 6",
-      thumbnail: "/images/3dmodeling02.png",
-      link: "/",
-    },
-  ];
+  const allAnimations = [];
+
+  const all3dModeling = [];
+
+  data.forEach((item) => {
+    if (item.category === "Logo Design") {
+      alllogodesigns.push(item);
+    } else if (item.category === "Branding") {
+      allbrandings.push(item);
+    } else if (item.category === "Print Design") {
+      allPrintDesigns.push(item);
+    } else if (item.category === "Social Media") {
+      allSocialMedia.push(item);
+    } else if (item.category === "Animation") {
+      allAnimations.push(item);
+    } else if (item.category === "3D Modeling") {
+      all3dModeling.push(item);
+    }
+  });
 
   const location = useLocation();
 
@@ -290,8 +92,8 @@ const SingleServices = () => {
                 >
                   <div className="w-full md:w-[350px] md:h-[300px] mx-auto group overflow-hidden relative rounded-md">
                     <img
-                      src={data.thumbnail}
-                      className="w-full group-hover:scale-125 transition-all duration-300"
+                      src={`https://api.designerarif.com/${data.thumbnail}`}
+                      className="w-full h-full group-hover:scale-125 transition-all duration-300"
                       alt={data.name}
                     />
                     <div className="w-full h-full p-5 absolute bottom-[-5px] left-0 bg-gradient-to-t from-[#002D3B] via-[#002d3b56] to-transparent">
