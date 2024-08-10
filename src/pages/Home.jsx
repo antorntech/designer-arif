@@ -8,11 +8,13 @@ import HomeSkills from "../components/home/HomeSkills";
 import HomeClientStories from "../components/home/HomeClientStories";
 import HomeContacts from "../components/home/HomeContacts";
 import HomeRecentBlogs02 from "../components/home/HomeRecentBlogs02";
+import HomeSlider from "../components/home/HomeSlider";
 
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HomeSlider />
       <HomeTaskSection />
       <HomeQualityService />
       <HomeRecentWork />
