@@ -97,7 +97,6 @@ const SingleServices = () => {
                           alt=""
                           className="w-full h-full object-cover rounded-lg group-hover:scale-125 transition-all duration-500"
                         />
-                        <div className="w-full h-full bg-gradient-to-t from-[#002D3B] via-[#002d3bb0] to-transparent absolute top-0 left-0 rounded-lg hover:scale-125 transition-all duration-500"></div>
                       </div>
                     </div>
                     <div className="w-full p-3">
