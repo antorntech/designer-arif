@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function SampleNextArrow(props) {
-  const { className, onClick } = props;
+  const { onClick } = props;
   return (
     <div onClick={onClick}>
       <i class="fa-solid fa-angle-right text-white absolute top-1/2 right-0 bg-[#0bb0ba] p-2 cursor-pointer z-30"></i>
@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, onClick } = props;
+  const { onClick } = props;
   return (
     <div onClick={onClick}>
       <i class="fa-solid fa-angle-left text-white absolute top-1/2 left-0 bg-[#0bb0ba] p-2 cursor-pointer z-30"></i>
