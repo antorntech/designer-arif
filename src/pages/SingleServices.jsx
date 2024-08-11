@@ -5,7 +5,6 @@ import CustomModal from "../components/custommodal/CustomModal";
 
 const SingleServices = () => {
   const [data, setData] = useState([]);
-  console.log(data);
   useEffect(() => {
     fetch("https://api.designerarif.com/api/v1/services")
       .then((res) => res.json())
@@ -88,7 +87,7 @@ const SingleServices = () => {
                 <div
                   key={data.id}
                   className="w-full h-full cursor-pointer"
-                  onClick={() => handleImageClick(data.thumbnail)}
+                  onClick={() => handleImageClick(data.mainPhoto)}
                 >
                   <div key={index} className="px-2">
                     <div className="w-full cursor-pointer">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,23 +22,12 @@ function SamplePrevArrow(props) {
 }
 
 const HomeSlider = () => {
-  const sliders = [
-    {
-      id: 1,
-      mobilePhoto: "images/slider5.png",
-      desktopPhoto: "images/slider1.png",
-    },
-    {
-      id: 2,
-      mobilePhoto: "images/slider5.png",
-      desktopPhoto: "images/slider3.png",
-    },
-    {
-      id: 3,
-      mobilePhoto: "images/slider5.png",
-      desktopPhoto: "images/slider1.png",
-    },
-  ];
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/slider")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
 
   const settings = {
     dots: true,
@@ -56,18 +45,18 @@ const HomeSlider = () => {
       <div className="w-full h-full max-w-screen-xl mx-auto px-4 py-4">
         <div className="slider-container">
           <Slider {...settings}>
-            {sliders.map((slider) => (
+            {data.map((slider) => (
               <>
                 <div key={slider.id} className="slider hidden md:block">
                   <img
-                    src={slider.desktopPhoto}
+                    src={`https://api.designerarif.com/${slider.desktopPhoto}`}
                     alt=""
                     className="w-full h-full"
                   />
                 </div>
                 <div key={slider.id} className="slider block md:hidden">
                   <img
-                    src={slider.mobilePhoto}
+                    src={`https://api.designerarif.com/${slider.mobilePhoto}`}
                     alt=""
                     className="w-[85%] h-full"
                   />
