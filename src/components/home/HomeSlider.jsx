@@ -8,7 +8,7 @@ function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div onClick={onClick}>
-      <i className="fa-solid fa-angle-right text-white absolute top-1/2 right-0 bg-[#0bb0ba] p-2 cursor-pointer z-30"></i>
+      <i className="fa-solid fa-angle-right text-white absolute top-1/2 right-0 md:right-[-50px] slick-icon-bg p-2 cursor-pointer z-30"></i>
     </div>
   );
 }
@@ -17,7 +17,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div onClick={onClick}>
-      <i className="fa-solid fa-angle-left text-white absolute top-1/2 left-0 bg-[#0bb0ba] p-2 cursor-pointer z-30"></i>
+      <i className="fa-solid fa-angle-left text-white absolute top-1/2 left-0 md:left-[-50px] slick-icon-bg p-2 cursor-pointer z-30"></i>
     </div>
   );
 }
