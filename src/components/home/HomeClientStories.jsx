@@ -3,6 +3,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div onClick={onClick}>
+      <i className="fa-solid fa-angle-right text-white absolute top-1/2 right-0 md:right-[-50px] slick-icon-bg p-2 cursor-pointer z-30"></i>
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div onClick={onClick}>
+      <i className="fa-solid fa-angle-left text-white absolute top-1/2 left-0 md:left-[-50px] slick-icon-bg p-2 cursor-pointer z-30"></i>
+    </div>
+  );
+}
+
 const HomeClientStories = () => {
   const [clientsSays, setclientsSays] = useState([]);
   useEffect(() => {
@@ -10,12 +28,15 @@ const HomeClientStories = () => {
       .then((res) => res.json())
       .then((data) => setclientsSays(data));
   }, []);
+
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
