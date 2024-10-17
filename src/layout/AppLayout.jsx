@@ -39,11 +39,11 @@ const AppLayout = () => {
           <Footer />
           {/* Sticky WhatsApp Button */}
           <button
-            className="whatsapp-button"
+            className="whatsapp-button animate-ping"
             onClick={handleWhatsAppClick}
             aria-label="Chat on WhatsApp"
           >
-            <i className="fa-brands fa-whatsapp"></i>
+            <i className="fa-brands fa-whatsapp heartbeat"></i>
           </button>
         </>
       )}

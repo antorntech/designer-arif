@@ -131,13 +131,37 @@ body {
   cursor: pointer;
   z-index: 1000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: wobble-hor-bottom 3s infinite both;
 }
 
 .whatsapp-button:hover {
-  transform: scale(1.1);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  animation: none;
 }
 
 .whatsapp-button i {
-  font-size: 24px;
+  font-size: 35px;
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-10px) rotate(-16deg);
+  }
+  30% {
+    transform: translateX(8px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-8px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-3px) rotate(-1.2deg);
+  }
 }
