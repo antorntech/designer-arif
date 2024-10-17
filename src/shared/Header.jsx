@@ -71,7 +71,7 @@ const Header = () => {
         <div className="w-full max-w-screen-xl mx-auto flex justify-between items-center gap-3">
           <div>
             <Link to="/">
-              <img src="/images/s.png" alt="logo" width={300} />
+              <img src="/images/s.png" alt="logo" width={150} />
             </Link>
           </div>
           <div className="flex items-center gap-5">
