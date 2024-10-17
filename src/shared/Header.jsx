@@ -97,7 +97,7 @@ const Header = () => {
         <div className=" py-2 flex items-center justify-between shadow-sm">
           <div>
             <Link to="/">
-              <img src="logo-white.png" alt="logo" width={200} />
+              <img src="/images/s.png" alt="logo" width={110} />
             </Link>
           </div>
           <div>
