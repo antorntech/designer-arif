@@ -43,7 +43,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <p className="text-gray-300 mt-8">
+            <p className="text-gray-300 mt-8 text-center">
               © {year} Site Designed & Developed by{" "}
               <Link
                 to="https://antors.netlify.app/"
