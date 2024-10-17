@@ -15,6 +15,16 @@ const AppLayout = () => {
       setIsLoading(false);
     }, 1000);
   }, []);
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "01996774893";
+    const message = "Hello Arif, I would like to chat with you!";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <>
       {isLoading ? (
@@ -27,6 +37,14 @@ const AppLayout = () => {
             <AppRoutes />
           </main>
           <Footer />
+          {/* Sticky WhatsApp Button */}
+          <button
+            className="whatsapp-button"
+            onClick={handleWhatsAppClick}
+            aria-label="Chat on WhatsApp"
+          >
+            <i className="fa-brands fa-whatsapp"></i>
+          </button>
         </>
       )}
       <ToastContainer />
