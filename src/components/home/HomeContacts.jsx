@@ -96,7 +96,11 @@ const HomeContacts = () => {
                     target="_blank"
                   >
                     <div className="w-full md:w-[200px] border-2 border-[#183c4b] rounded-md hover:bg-[#183c4b] transition-all duration-300 px-4 py-2 flex items-center justify-center gap-2 text-white">
-                      <img src="instagram.png" alt="instagram.png" />
+                      <img
+                        src="instagram.png"
+                        alt="instagram.png"
+                        className="w-6 h-6"
+                      />
                       <span className="text-2xl">Instagram</span>
                     </div>
                   </Link>

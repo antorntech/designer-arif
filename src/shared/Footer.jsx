@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <>
       <section className="py-6 md:py-[50px] lg:py-[80px] border-t-2 border-[#383838]">
@@ -43,7 +44,16 @@ const Footer = () => {
               </li>
             </ul>
             <p className="text-gray-300 mt-8">
-              © 2024 All Rights Reserved by AM ANTOR
+              © {year} Site Designed & Developed by{" "}
+              <Link
+                to="https://antors.netlify.app/"
+                target="_blank"
+                className="text-cyan-500 underline"
+              >
+                AM ANTOR
+              </Link>{" "}
+              - All Rights Reserved by{" "}
+              <span className="text-gradient">Designer Arif Hossain</span>
             </p>
           </div>
         </div>

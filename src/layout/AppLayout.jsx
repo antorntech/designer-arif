@@ -13,7 +13,7 @@ const AppLayout = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2950);
   }, []);
 
   const handleWhatsAppClick = () => {
