@@ -3,8 +3,32 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [scrolled, setScrolled] = useState(false);
+  const [mainLogo, setMainLogo] = useState("");
+
+  const getSettings = async () => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    try {
+      const response = await fetch(
+        "https://api.designerarif.com/api/v1/settings",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+      setMainLogo(data[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getSettings();
+  }, []);
 
   // Add the 'scrolled' class to the header when scrolling down
   useEffect(() => {
@@ -71,7 +95,15 @@ const Header = () => {
         <div className="w-full max-w-screen-xl mx-auto flex justify-between items-center gap-3">
           <div>
             <Link to="/">
-              <img src="/images/s.png" alt="logo" width={150} />
+              <img
+                src={
+                  mainLogo
+                    ? `https://api.designerarif.com${mainLogo.logoPic}`
+                    : "/images/s.png"
+                }
+                alt="logo"
+                width={150}
+              />
             </Link>
           </div>
           <div className="flex items-center gap-5">
@@ -97,7 +129,15 @@ const Header = () => {
         <div className=" py-2 flex items-center justify-between shadow-sm">
           <div>
             <Link to="/">
-              <img src="/images/s.png" alt="logo" width={110} />
+              <img
+                src={
+                  mainLogo
+                    ? `https://api.designerarif.com${mainLogo.logoPic}`
+                    : "/images/s.png"
+                }
+                alt="logo"
+                width={110}
+              />
             </Link>
           </div>
           <div>
