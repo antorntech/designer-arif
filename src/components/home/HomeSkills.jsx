@@ -44,7 +44,7 @@ const HomeSkills = () => {
                     suffix="%"
                     className="text-white text-xl mt-3"
                   />
-                  <p className="text-2xl font-semibold mt-2 text-gradient">
+                  <p className="text-2xl font-semibold mt-2 text-gradient whitespace-nowrap">
                     {skill.title}
                   </p>
                 </div>

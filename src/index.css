@@ -165,3 +165,17 @@ body {
     transform: translateX(-3px) rotate(-1.2deg);
   }
 }
+
+.slide-in-fwd-center {
+  animation: slide-in-fwd-center 1s ease-in-out infinite alternate both;
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

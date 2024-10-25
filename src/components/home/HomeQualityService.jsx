@@ -39,7 +39,7 @@ const HomeQualityService = () => {
                       <img
                         src={`https://api.designerarif.com/${data?.thumbnail}`}
                         alt=""
-                        className="rounded-b-[10%] rounded-br-[10%] rounded-bl-[10%] hover:scale-125 w-full h-full object-fit transition-all duration-500"
+                        className="aspect-square rounded-b-[10%] rounded-br-[10%] rounded-bl-[10%] hover:scale-125 w-full h-full object-fit transition-all duration-500"
                       />
                     </div>
                   </div>
