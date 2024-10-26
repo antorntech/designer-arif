@@ -20,8 +20,8 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -29,12 +29,12 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: #1d1d1d88;
+  background-color: #04996c88;
   transition: all ease-in-out 0.4s;
 }
 
 .close-button:hover {
-  background-color: #333;
+  color: #fff;
 }
 
 .video-modal-content {
@@ -42,10 +42,32 @@
   background-color: #ffffff;
   padding: 40px;
   border-radius: 8px;
-  width: 800px;
-  height: 500px;
+  width: 900px;
+  height: 600px;
   overflow: auto;
   animation: zoomIn 0.5s;
+}
+
+@media screen and (768px < width < 1024px) {
+  .video-modal-content {
+    width: 700px;
+    height: 500px;
+  }
+}
+
+@media screen and (512px < width < 768px) {
+  .video-modal-content {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media screen and (width < 512px) {
+  .video-modal-content {
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+  }
 }
 
 /* Animation */

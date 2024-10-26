@@ -2,35 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ViewVideoModal from "../viewvideomodal/ViewVideoModal";
 
-const HomeSuccessStory = () => {
-  const [stories, setStories] = useState([
-    {
-      _id: "",
-      videoUrl: "",
-      banner: "/1.jpg",
-    },
-    {
-      _id: "",
-      videoUrl: "",
-      banner: "/2.jpg",
-    },
-    {
-      _id: "",
-      videoUrl: "",
-      banner: "/3.jpg",
-    },
-    {
-      _id: "",
-      videoUrl: "",
-      banner: "/1.jpg",
-    },
-  ]);
+const VideoAnimation = () => {
+  const [videoAnimations, setVideoAnimations] = useState([]);
+  console.log(videoAnimations);
 
-  //   useEffect(() => {
-  //     fetch("https://api.designerarif.com/api/v1/blogs/recent")
-  //       .then((res) => res.json())
-  //       .then((data) => setRecentBlogs(data));
-  //   }, []);
+  useEffect(() => {
+    fetch("https://api.designerarif.com/api/v1/videoanimations")
+      .then((res) => res.json())
+      .then((data) => setVideoAnimations(data));
+  }, []);
 
   // add-video-modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,12 +44,11 @@ const HomeSuccessStory = () => {
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            {stories.map((story, index) => (
+            {videoAnimations.map((item, index) => (
               <div key={index}>
                 <div className="w-full group overflow-hidden relative rounded-md">
                   <img
-                    // src={`https://api.designerarif.com/${story?.banner}`}
-                    src={story?.banner}
+                    src={`https://api.designerarif.com/${item?.banner}`}
                     className="w-full aspect-square md:w-[700px] md:h-[370px] rounded-3xl"
                     alt=""
                   />
@@ -80,7 +59,7 @@ const HomeSuccessStory = () => {
                         src="/play.png"
                         alt="play.png"
                         className="z-30 cursor-pointer"
-                        onClick={() => handleVideoClick(story?.videoUrl)}
+                        onClick={() => handleVideoClick(item?.videoUrl)}
                       />
                     </div>
                   </div>
@@ -101,4 +80,4 @@ const HomeSuccessStory = () => {
   );
 };
 
-export default HomeSuccessStory;
+export default VideoAnimation;

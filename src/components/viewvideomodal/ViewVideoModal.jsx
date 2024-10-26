@@ -1,21 +1,23 @@
 import React from "react";
 import "./ViewVideoModal.css";
 
-const ViewVideoModal = ({ isOpen, onClose }) => {
+const ViewVideoModal = ({ isOpen, onClose, videoLink }) => {
   if (!isOpen) return null;
 
   return (
     <div className="video-modal">
       <div className="video-modal-content">
-        <button onClick={onClose} className="close-button">
-          +
+        <button
+          onClick={onClose}
+          className="close-button flex justify-center items-center"
+        >
+          <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
         <iframe
-          width="720"
-          height="420"
-          src="https://www.youtube.com/embed/t6iwNbweKJw?si=kIRoQQvhfCcydSdf"
+          src={videoLink}
           title="YouTube video player"
           frameborder="0"
+          className="w-full h-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen

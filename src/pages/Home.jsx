@@ -9,7 +9,7 @@ import HomeClientStories from "../components/home/HomeClientStories";
 import HomeContacts from "../components/home/HomeContacts";
 import HomeRecentBlogs02 from "../components/home/HomeRecentBlogs02";
 import HomeSlider from "../components/home/HomeSlider";
-import HomeSuccessStory from "../components/home/HomeSuccessStory";
+import VideoAnimation from "../components/home/VideoAnimation";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
       <HomeRecentWork />
       <HomeExperience />
       <HomeSkills />
-      <HomeSuccessStory />
+      <VideoAnimation />
       <HomeClientStories />
       <HomeRecentBlogs02 />
       <HomeContacts />
