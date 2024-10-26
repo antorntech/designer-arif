@@ -11,7 +11,7 @@ const ViewVideoModal = ({ isOpen, onClose, videoLink }) => {
           onClick={onClose}
           className="close-button flex justify-center items-center"
         >
-          <i className="fa-solid fa-xmark text-2xl"></i>
+          <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
         <iframe
           src={videoLink}
