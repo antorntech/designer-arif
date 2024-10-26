@@ -26,10 +26,10 @@ const HomeSkills = () => {
           data-aos="fade-in"
           data-aos-duration="3000"
         >
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <div
               className="w-full flex items-center gap-5 rounded-md"
-              key={skill.id}
+              key={index}
             >
               <div className="w-full text-center">
                 <div className="blurry group p-5 hover:bg-slate-800 transition-all duration-300 flex flex-col items-center gap-2">

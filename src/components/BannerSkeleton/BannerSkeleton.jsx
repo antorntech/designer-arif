@@ -2,9 +2,9 @@ import React from "react";
 
 const BannerSkeleton = () => {
   return (
-    <div class="flex h-full items-center justify-center mb-4 bg-gray-300 rounded dark:bg-gray-700">
+    <div className="flex h-full items-center justify-center mb-4 bg-gray-300 rounded dark:bg-gray-700">
       <svg
-        class="w-10 h-10 text-gray-200 dark:text-gray-600"
+        className="w-10 h-10 text-gray-200 dark:text-gray-600"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"

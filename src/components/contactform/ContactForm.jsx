@@ -20,7 +20,6 @@ export const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(contactDetails);
     fetch("https://api.designerarif.com/api/v1/contact/add", {
       method: "POST",
       headers: {

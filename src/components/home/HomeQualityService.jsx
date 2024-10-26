@@ -28,9 +28,9 @@ const HomeQualityService = () => {
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            {myQualityServices?.map((data) => {
+            {myQualityServices?.map((data, index) => {
               return (
-                <Link to={`/services/${data?.link}`} key={data?.id}>
+                <Link to={`/services/${data?.link}`} key={index}>
                   <div className="border-2 border-gray-600 rounded-[10%] overflow-hidden">
                     <h1 className="text-white text-2xl text-center font-semibold p-5">
                       {data?.title}

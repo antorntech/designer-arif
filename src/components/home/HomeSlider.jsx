@@ -58,8 +58,8 @@ const HomeSlider = () => {
             </div>
           ) : (
             <Slider {...settings}>
-              {data.map((slider) => (
-                <div key={slider.id}>
+              {data.map((slider, index) => (
+                <div key={index}>
                   <div className="slider hidden md:block">
                     <img
                       src={`https://api.designerarif.com/${slider.desktopPhoto}`}

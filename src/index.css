@@ -172,7 +172,7 @@ body {
 @keyframes slide-in-fwd-center {
   0% {
     transform: translateZ(-1400px);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   100% {
     transform: translateZ(0);

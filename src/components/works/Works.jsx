@@ -6,7 +6,6 @@ const Works = () => {
 
   const openTab = (tabName) => {
     setActiveTab(tabName);
-    console.log(tabName);
   };
 
   const myFeaturedCourses = [

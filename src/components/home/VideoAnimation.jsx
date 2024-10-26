@@ -4,7 +4,6 @@ import ViewVideoModal from "../viewvideomodal/ViewVideoModal";
 
 const VideoAnimation = () => {
   const [videoAnimations, setVideoAnimations] = useState([]);
-  console.log(videoAnimations);
 
   useEffect(() => {
     fetch("https://api.designerarif.com/api/v1/videoanimations")
@@ -32,7 +31,7 @@ const VideoAnimation = () => {
         <div className="w-full h-full grid max-w-screen-xl px-4 py-4 mx-auto">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-gradient text-2xl md:text-6xl font-bold py-2">
-              My Sucess Story
+              Video & Animation
             </h1>
             <p className="text-white w-full md:w-1/2 mx-auto mt-3">
               You can easily get the information you need to grow your business
@@ -49,12 +48,12 @@ const VideoAnimation = () => {
                 <div className="w-full group overflow-hidden relative rounded-md">
                   <img
                     src={`https://api.designerarif.com/${item?.banner}`}
-                    className="w-full aspect-square md:w-[700px] md:h-[370px] rounded-3xl"
+                    className="w-full h-[280px] aspect-square md:w-[700px] md:h-[370px] rounded-3xl"
                     alt=""
                   />
                   <div className="absolute top-0 left-0 w-full h-full border-2 border-[#13FB9F] rounded-3xl flex items-center justify-center">
                     <div className="size-20 rounded-full flex items-center justify-center relative">
-                      <div className="size-20 slide-in-fwd-center absolute top-0 left-0 z-20 flex items-center justify-center bg-slate-500 rounded-full"></div>
+                      <div className="size-20 slide-in-fwd-center absolute top-0 left-0 z-20 flex items-center justify-center bg-black rounded-full"></div>
                       <img
                         src="/play.png"
                         alt="play.png"

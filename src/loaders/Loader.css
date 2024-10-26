@@ -109,19 +109,19 @@
 @keyframes mouth1 {
   from {
     animation-timing-function: ease-in;
-    stroke-dasharray: 0 351.86;
+    strokelinecap: 0 351.86;
     stroke-dashoffset: 0;
   }
 
   25% {
     animation-timing-function: ease-out;
-    stroke-dasharray: 175.93 351.86;
+    strokelinecap: 175.93 351.86;
     stroke-dashoffset: 0;
   }
 
   50% {
     animation-timing-function: steps(1, start);
-    stroke-dasharray: 175.93 351.86;
+    strokelinecap: 175.93 351.86;
     stroke-dashoffset: -175.93;
     visibility: visible;
   }
